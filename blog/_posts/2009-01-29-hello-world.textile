@@ -7,3 +7,5 @@ h1. {{ page.title }}
 
 p(meta). 29 Jan 2009 - Montreal
 
+post {{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}
+page {{ page.date | date_to_string }}</span> &raquo; <a href="{{ page.url }}">{{ page.title }}
