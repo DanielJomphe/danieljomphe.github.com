@@ -3,10 +3,4 @@ layout: post
 title: Hello World
 ---
 
-<a href="{{ site.url }}">{{ site.title }}</a>
-
-h1. {{ page.title }}
-
 p(meta). First published: 29 Jan 2009 - Montreal
-
-p(meta). Latest revision: {{ page.date | date_to_string }}
