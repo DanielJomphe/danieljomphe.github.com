@@ -4,7 +4,10 @@ layout: default
 
 <h1>{{ page.title }}</h1>
 
-<p class="meta">{{ page.date | date_to_string }} &raquo; Last Updated</p>
+<p class="meta">
+	{{ page.date | date_to_string }} &raquo; Last Updated<br />
+	{{ page.date-published }} &raquo; First Published
+</p>
 
 <div id="post">
 {{ content }}
