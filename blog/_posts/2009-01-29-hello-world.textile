@@ -1,0 +1,9 @@
+---
+layout: post
+title: Hello World
+---
+
+h1. {{ page.title }}
+
+p(meta). 29 Jan 2009 - Montreal
+
