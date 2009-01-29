@@ -3,7 +3,7 @@ layout: post
 title: Hello World
 ---
 
-<a href="{{ site.url }}">{{ site.title }}
+<a href="{{ site.url }}">{{ site.title }}</a>
 
 h1. {{ page.title }}
 
