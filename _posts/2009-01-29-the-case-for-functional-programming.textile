@@ -1,6 +1,6 @@
 ---
 layout: post
 title: The Case For Functional Programming
-date-published: 29 Jan 2009
+date-updated: 29 Jan 2009
 ---
 
