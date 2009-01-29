@@ -3,4 +3,4 @@ layout: post
 title: Hello World
 ---
 
-p(meta). 29 Jan 2009 - First Published
+p(meta). 29 Jan 2009 &raquo; First Published
