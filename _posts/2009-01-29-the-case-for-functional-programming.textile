@@ -1,6 +1,113 @@
 ---
 layout: post
 title:        The Case For Functional Programming
-date-updated: 29 Jan 2009
+date-updated: 30 Jan 2009
 ---
 
+h1. Comparisons
+
+h2. A Recipe Fit For A Chef
+
+h3. The Original Recipe
+
+h4. "Blueberry Buckle":http://allrecipes.com/Recipe/Blueberry-Buckle/Detail.aspx
+
+h5. Ingredients & Directions
+
+# Preheat oven to 375 degrees F (190 degrees C). Grease one 8x8 inch pan.
+# Cream together 3/4 cup sugar, 1/4 cup shortening, and one egg.
+# In a separate bowl mix together 2 cups flour, 2 teaspoons baking powder, and 1/2 teaspoon salt. Stir into sugar mixture, alternating with 1/2 cup milk. Stir in 2 cups fresh blueberries. Pour into greased 8x8 inch pan.
+# To make topping: Combine 1/2 cup sugar, 1/3 cup flour, 1/2 teaspoon ground cinnamon, and 1/4 cup butter. Sprinkle over cake batter.
+# Bake at 375 degree F (190 degrees C) for 25-30 minutes.
+
+h5. Expressed In An Imperative Language
+
+<pre>
+{% highlight java linenos %}
+	Chef   chef       = new Chef();
+	Oven   oven       = new Oven();
+	Pan    pan        = new Pan(8, 8);
+	Grease shortening = new Crisco();
+
+	chef.prepare(oven, 375);
+	chef.prepare(pan,  shortening);
+	
+	Mixture cream = chef.mixAndHomogenize(
+	 chef.prepare(new Sugar(),          Units.cup(3/4)),
+	 chef.prepare(shortening,           Units.cup(1/4)),
+	 chef.prepare(new Egg()));
+	
+	Mixture cake = chef.mixAndHomogenize(
+	 chef.prepare(new Flour(),          Units.cup(2)),
+	 chef.prepare(new BakingPowder(),   Units.teaspoon(2)),
+	 chef.prepare(new Salt(),           Units.teaspoon(1/2)));
+	
+	cake = chef.mixAndHomogenizeProgressively(
+	 cream,
+	 chef.prepare(new Milk(),           Units.cup(1/2)));
+	
+	cake = chef.mix(
+	 chef.prepare(new Blueberries(),    Units.cup(2)));
+	
+	chef.pour(cake, pan);
+	
+	Mixture topping = chef.mixAndHomogenize(
+	 chef.prepare(new Sugar(),          Units.cup(1/2)),
+	 chef.prepare(new Flour(),          Units.cup(1/3)),
+	 chef.prepare(new GroundCinnamon(), Units.teaspoon(1/2)),
+	 chef.prepare(new Butter(),         Units.cup(1/4)));
+	
+	chef.sprinkle(pan, topping);
+	
+	chef.waitFor(oven);
+	
+	chef.bake(oven, pan, 25, 30);
+{% endhighlight %}
+<pre>
+
+
+
+h3. Stop taking the Chef for a fool!
+
+h3. Who's The Chef?
+
+h2. Is Formality What We Want?
+
+Then express it through a formal language!
+
+h2. Value Transparency, not Opaqueness
+
+
+h1. Fundamental Problems Of The Imperative Way
+
+h2. The Assignment Statement
+
+Turner, p.5, "It is because of this that it is so difficult to reason about programs. Since expressions can change their value through time, equality is not substitutive. Indeed, in a programming language it does not even have to be true that an expression is equal to itself (because the presence of side effects may mean that evaluating the same expression twice in succession can produce two different answers)! In general it is not possible to reason about such programs on the basis of a static analysis of the program text - instead we have to think of the program dynamically and follow the detailed flow of control [...]"
+
+h1. The Imperative Coalition's Last Hopes
+
+h2. Object Orientation
+
+h2. Higher-Order Functions
+
+h2. Limits
+
+h1. References
+
+h2. 1977 - John Backus
+
+h3. Bio
+
+*** "Wikipedia's Page":en.wikipedia.org/wiki/John_Backus
+*** "Alex Aiken's Memorial":theory.stanford.edu/~aiken/other/backus.pdf
+*** "IBM's Exhibit":http://www-03.ibm.com/ibm/history/exhibits/builders/builders_backus.html
+
+h3. Paper
+
+*** "Can Programming Be Liberated from the von Neumann Style?":theory.stanford.edu/~aiken/other/backus.pdf
+
+h2. 1982 - David Turner
+
+h2. 1984 - John Hughes
+
+** "Why Functional Programming Matters":www.address.com
