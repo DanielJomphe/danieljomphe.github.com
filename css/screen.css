@@ -6,11 +6,6 @@
  
 /* Global Reset */
  
-* {
-  margin: 0;
-  padding: 0;
-}
- 
 html, body {
   height: 100%;
 }
@@ -86,7 +81,6 @@ ul.posts {
   text-align: justify;
   width: 40em;
   margin: 3em auto 2em auto;
-  line-height: 1.5em;
 }
  
 .title {
