@@ -63,7 +63,7 @@ chef.sprinkle(topping, pan);
 
 chef.waitFor(oven);
 
-chef.bake(pan, oven, 25, 30);
+return chef.bake(pan, oven, 25, 30);
 {% endhighlight %}
 
 h3. Expressed In An Equational Language
@@ -81,15 +81,14 @@ panCake         = pour blueCake (Pan [8,8] Crisco)
 
 blueCake        = stir (BlueBerries (Cup 2)) smoothCake
 
-smoothCake      = mixProgressively (Milk (Cup 1/2)) cream base
-
-base            = mix [(Flour        (Cup 2)),
-                       (BakingPowder (Teaspoon 2)),
-                       (Salt         (Teaspoon 1/2))]
-
-cream           = mix [(Sugar  (Cup 3/4)),
+smoothCake      = mixProgressively [milk,cream,base]
+  where milk    = (Milk (Cup 1/2))
+        cream   = mix [(Sugar  (Cup 3/4)),
                        (Crisco (Cup 1/4)),
                        Egg]
+        base    = mix [(Flour        (Cup 2)),
+                       (BakingPowder (Teaspoon 2)),
+                       (Salt         (Teaspoon 1/2))]
 {% endhighlight %}
 
 
