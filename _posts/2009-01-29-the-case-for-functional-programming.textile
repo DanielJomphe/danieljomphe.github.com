@@ -22,7 +22,6 @@ h5. Ingredients & Directions
 
 h5. Expressed In An Imperative Language
 
-<pre>
 {% highlight java linenos %}
 	Chef   chef       = new Chef();
 	Oven   oven       = new Oven();
@@ -63,7 +62,6 @@ h5. Expressed In An Imperative Language
 	
 	chef.bake(oven, pan, 25, 30);
 {% endhighlight %}
-<pre>
 
 
 
