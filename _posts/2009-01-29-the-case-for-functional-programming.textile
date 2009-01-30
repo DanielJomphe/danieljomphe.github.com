@@ -4,15 +4,13 @@ title:        The Case For Functional Programming
 date-updated: 30 Jan 2009
 ---
 
-h1. Comparisons
-
 h2. A Recipe Fit For A Chef
 
-h3. The Original Recipe
+Let's play with the first recipe I could find by asking Google for @recipe@ and using 2 mouse clicks: "Blueberry Buckle":http://allrecipes.com/Recipe/Blueberry-Buckle/Detail.aspx.
 
-This is a "Blueberry Buckle":http://allrecipes.com/Recipe/Blueberry-Buckle/Detail.aspx.
+As you will see below, I have inlined the ingredients measures directly in their preparation directions.
 
-h4. Ingredients & Directions
+h3. Expressed In The Original Language
 
 # Preheat oven to 375 degrees F (190 degrees C). Grease one 8x8 inch pan.
 # Cream together 3/4 cup sugar, 1/4 cup shortening, and one egg.
@@ -20,7 +18,9 @@ h4. Ingredients & Directions
 # To make topping: Combine 1/2 cup sugar, 1/3 cup flour, 1/2 teaspoon ground cinnamon, and 1/4 cup butter. Sprinkle over cake batter.
 # Bake at 375 degree F (190 degrees C) for 25-30 minutes.
 
-h4. Expressed In An Imperative Language
+h3. Expressed In An Imperative Language
+
+Here's the same recipe, this time expressed in a lightweight Java dialect:
 
 {% highlight java %}
 Chef   chef       = new Chef();
@@ -64,6 +64,11 @@ chef.waitFor(oven);
 chef.bake(oven, pan, 25, 30);
 {% endhighlight %}
 
+And a few observations:
+
+# 1
+# 2
+# 3
 
 h3. Stop taking the Chef for a fool!
 
@@ -76,36 +81,36 @@ Then express it through a formal language!
 h2. Value Transparency, not Opaqueness
 
 
-h1. Fundamental Problems Of The Imperative Way
+h2. Fundamental Problems Of The Imperative Way
 
-h2. The Assignment Statement
+h3. The Assignment Statement
 
 Turner, p.5, "It is because of this that it is so difficult to reason about programs. Since expressions can change their value through time, equality is not substitutive. Indeed, in a programming language it does not even have to be true that an expression is equal to itself (because the presence of side effects may mean that evaluating the same expression twice in succession can produce two different answers)! In general it is not possible to reason about such programs on the basis of a static analysis of the program text - instead we have to think of the program dynamically and follow the detailed flow of control [...]"
 
-h1. The Imperative Coalition's Last Hopes
+h2. The Imperative Coalition's Last Hopes
 
-h2. Object Orientation
+h3. Object Orientation
 
-h2. Higher-Order Functions
+h3. Higher-Order Functions
 
-h2. Limits
+h3. Limits
 
-h1. References
+h2. References
 
-h2. 1977 - John Backus
+h3. 1977 - John Backus
 
-h3. Bio
+h4. Bio
 
 *** "Wikipedia's Page":en.wikipedia.org/wiki/John_Backus
 *** "Alex Aiken's Memorial":theory.stanford.edu/~aiken/other/backus.pdf
 *** "IBM's Exhibit":http://www-03.ibm.com/ibm/history/exhibits/builders/builders_backus.html
 
-h3. Paper
+h4. Paper
 
 *** "Can Programming Be Liberated from the von Neumann Style?":theory.stanford.edu/~aiken/other/backus.pdf
 
-h2. 1982 - David Turner
+h3. 1982 - David Turner
 
-h2. 1984 - John Hughes
+h3. 1984 - John Hughes
 
 ** "Why Functional Programming Matters":www.address.com
