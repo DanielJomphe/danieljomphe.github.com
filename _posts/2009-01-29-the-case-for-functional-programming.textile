@@ -60,7 +60,7 @@ Mixture topping = chef.mixAndHomogenize(
 chef.sprinkle(pan, topping);
 //
 chef.waitFor(oven);
-//
+
 chef.bake(oven, pan, 25, 30);
 {% endhighlight %}
 
