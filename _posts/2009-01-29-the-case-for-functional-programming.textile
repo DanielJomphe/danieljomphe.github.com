@@ -4,25 +4,23 @@ title:        The Case For Functional Programming
 date-updated: 30 Jan 2009
 ---
 
-h2. A Recipe Fit For A Chef
+h2. Comparing Different Language Levels
 
 For illustration purposes, we'll use the recipe I chose by asking Google's first result for @recipe@, and clicking on two links. The first one led me to a deserts page, and the second one to the yummy-looking "Blueberry Buckle":http://allrecipes.com/Recipe/Blueberry-Buckle/Detail.aspx.
 
 As you will see below, I have inlined the ingredients' measures directly in their preparation directions.
 
-h3. Expressed In The Original Language
+h3. Expressed In Natural Language
 
-<blockquote>
-	# Preheat oven to 375 degrees. Grease one 8x8 inch pan.
-	# Cream together 3/4 cup sugar, 1/4 cup shortening, and one egg.
-	# In a separate bowl mix together 2 cups flour, 2 teaspoons baking powder, and 1/2 teaspoon salt. Stir into sugar mixture, alternating with 1/2 cup milk. Stir in 2 cups fresh blueberries. Pour into greased 8x8 inch pan.
-	# To make topping: Combine 1/2 cup sugar, 1/3 cup flour, 1/2 teaspoon ground cinnamon, and 1/4 cup butter. Sprinkle over cake batter.
-	# Bake at 375 degree for 25-30 minutes.
-</blockquote>
+# Preheat oven to 375 degrees. Grease one 8x8 inch pan.
+# Cream together 3/4 cup sugar, 1/4 cup shortening, and one egg.
+# In a separate bowl mix together 2 cups flour, 2 teaspoons baking powder, and 1/2 teaspoon salt. Stir into sugar mixture, alternating with 1/2 cup milk. Stir in 2 cups fresh blueberries. Pour into greased 8x8 inch pan.
+# To make topping: Combine 1/2 cup sugar, 1/3 cup flour, 1/2 teaspoon ground cinnamon, and 1/4 cup butter. Sprinkle over cake batter.
+# Bake at 375 degree for 25-30 minutes.
 
 h3. Expressed In An Imperative Language
 
-Here's the same recipe, this time expressed in a lightweight Java dialect:
+Here's the same recipe, this time expressed in some dialect of Java:
 
 {% highlight java %}
 Chef   chef       = new Chef();
@@ -34,43 +32,66 @@ Grease shortening = new Crisco();
 chef.prepare(oven, 375);
 chef.prepare(pan,  shortening);
 
-Mixture cream = chef.mixAndHomogenize(
+Mixture cream = chef.mix(
  chef.prepare(new Sugar(),          Units.cup(3/4)),
  chef.prepare(shortening,           Units.cup(1/4)),
  chef.prepare(new Egg()));
 
-Mixture cake = chef.mixAndHomogenize(
+Mixture cake = chef.mix(
  chef.prepare(new Flour(),          Units.cup(2)),
  chef.prepare(new BakingPowder(),   Units.teaspoon(2)),
  chef.prepare(new Salt(),           Units.teaspoon(1/2)));
 
-cake = chef.mixAndHomogenizeProgressively(
+cake = chef.mixProgressively(
+ cake,
  cream,
  chef.prepare(new Milk(),           Units.cup(1/2)));
 
-cake = chef.mix(
+cake = chef.stir(
+ cake,
  chef.prepare(new Blueberries(),    Units.cup(2)));
 
 chef.pour(cake, pan);
 
-Mixture topping = chef.mixAndHomogenize(
+Mixture topping = chef.mix(
  chef.prepare(new Sugar(),          Units.cup(1/2)),
  chef.prepare(new Flour(),          Units.cup(1/3)),
  chef.prepare(new GroundCinnamon(), Units.teaspoon(1/2)),
  chef.prepare(new Butter(),         Units.cup(1/4)));
 
-chef.sprinkle(pan, topping);
+chef.sprinkle(topping, pan);
 
 chef.waitFor(oven);
 
-chef.bake(oven, pan, 25, 30);
+chef.bake(pan, oven, 25, 30);
 {% endhighlight %}
 
-And a few observations:
+h3. Expressed In An Equational Language
 
-# 1
-# 2
-# 3
+{% highlight haskell %}
+blueberryBuckle = Oven 375 readyCake [25..30]
+
+readyCake       = sprinkle topping panCake
+  where topping = mix [(Sugar          (Cup 1/2)),
+                       (Flour          (Cup 1/3)),
+                       (GroundCinnamon (Teaspoon 1/2)),
+                       (Butter         (Cup 1/4))]
+
+panCake         = pour blueCake (Pan [8,8] Crisco)
+
+blueCake        = stir (BlueBerries (Cup 2)) smoothCake
+
+smoothCake      = mixProgressively (Milk (Cup 1/2)) cream base
+
+base            = mix [(Flour        (Cup 2)),
+                       (BakingPowder (Teaspoon 2)),
+                       (Salt         (Teaspoon 1/2))]
+
+cream           = mix [(Sugar  (Cup 3/4)),
+                       (Crisco (Cup 1/4)),
+                       Egg]
+{% endhighlight %}
+
 
 h3. Stop taking the Chef for a fool!
 
