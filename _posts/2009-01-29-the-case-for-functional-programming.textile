@@ -180,13 +180,15 @@ If we consider that:
 * each one of the program versions we looked at was successively closer to machine-level details, and
 * John's opinions were really true,
 
-then we can safely assume some conclusions for these languages and those between them.
+then we can safely derive some conclusions.
 
 h4. Conclusion
 
-| Each time we step *closer* to the *machine-level* details... | ...we need to invest *more mental effort* and *more time* to write something. |
-| <br /> | <br /> |
-| Each time we step *farther* away from the *machine-level* details... | ...we need to invest *less mental effort* and *less time* to write something. |
+| Each time we step *closer* to the *machine-level* details... |
+|>. ...we need to invest *more mental effort* and *more time* to write something. |
+| <br /> |
+| Each time we step *farther* away from the *machine-level* details... |
+|>. ...we need to invest *less mental effort* and *less time* to write something. |
 
 h5. Rantings
 
@@ -228,11 +230,25 @@ In other words, we write the reciprocal of what the compiler writes:
 
 <pre>
 ourCode + compilerCode = program
-
-Given program = 1, we have:
-	
-ourCode + compilerCode = 1
 </pre>
+
+From this, we can derive:
+
+<pre>
+ourCode      = program - compilerCode
+compilerCode = program - ourCode
+</pre>
+
+Since we don't care about @program@ as long as it's constant, we can write:
+
+<pre>
+ourCode      = -compilerCode
+compilerCode = -ourCode
+</pre>
+
+And we've reached the reciprocal.
+
+Now, if this doesn't make sense at all to you, there's a good reason for it. _Any_ successful high-schooler could beat my long-forgotten maths skills. Therefore, please correct me if I'm wrong in any way.
 
 h5. Then Who's The Compiler?
 
