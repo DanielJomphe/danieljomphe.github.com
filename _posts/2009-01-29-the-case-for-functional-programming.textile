@@ -245,7 +245,7 @@ Now, if this doesn't make sense at all to you, there's a good reason for it. _An
 
 h5. Then Who's The Compiler?
 
-So in reality, the Chef is made up of two entities. First, human-generated code. Second, compiler-generated code. In other words, the compiler is made up of a human compiler and a machine compiler. Hey, don't call me a compiler, that's _gross_!
+So in reality, the Chef is made up of two entities. First, human-generated code. Second, compiler-generated code. In other words, the compiler is made up of a human compiler and a machine compiler. _Hey!_ don't call me a compiler, that's _gross_!
 
 h5. Our Choice
 
@@ -254,6 +254,28 @@ Now, trust John, we don't want to be the Chef. That's why we don't use assembly 
 Therefore, if we could find a Chef that allows us to express our desires five times more succinctly and clearly than the one that comes with Java, wouldn't we be up for total enlightenment? We could either write five times faster the same programs as what we write today with Java, or take the same time that we're used to, but to get programs five times more interesting. 
 
 Wow! I want to work with a better Chef. Don't you?
+
+h2. Prior Comparisons Of Language Levels
+
+Now, let's put aside our own conclusions to hear other kinds of wisdom.
+
+h3. 1977 - John Backus
+
+h4. Bio
+
+*** "Wikipedia's Page":http://en.wikipedia.org/wiki/John_Backus
+*** "Alex Aiken's Memorial":http://theory.stanford.edu/~aiken/other/backus.pdf
+*** "IBM's Exhibit":http://www-03.ibm.com/ibm/history/exhibits/builders/builders_backus.html
+
+h4. Paper
+
+*** "Can Programming Be Liberated from the von Neumann Style?":theory.stanford.edu/~aiken/other/backus.pdf
+
+h3. 1982 - David Turner
+
+h3. 1984 - John Hughes
+
+** "Why Functional Programming Matters":www.address.com
 
 h2. Is Formality What We Want?
 
@@ -274,23 +296,3 @@ h3. Object Orientation
 h3. Higher-Order Functions
 
 h3. Limits
-
-h2. References
-
-h3. 1977 - John Backus
-
-h4. Bio
-
-*** "Wikipedia's Page":en.wikipedia.org/wiki/John_Backus
-*** "Alex Aiken's Memorial":theory.stanford.edu/~aiken/other/backus.pdf
-*** "IBM's Exhibit":http://www-03.ibm.com/ibm/history/exhibits/builders/builders_backus.html
-
-h4. Paper
-
-*** "Can Programming Be Liberated from the von Neumann Style?":theory.stanford.edu/~aiken/other/backus.pdf
-
-h3. 1982 - David Turner
-
-h3. 1984 - John Hughes
-
-** "Why Functional Programming Matters":www.address.com
