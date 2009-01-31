@@ -30,7 +30,7 @@ h3. Expressed In A Functional Language
 
 h4. Some Dialect Of Haskell
 
-{% highlight haskell linenos %}
+{% highlight haskell %}
 blueberryBuckle = bake Oven 375 readyCake [25..30]
 
 readyCake       = sprinkle topping panCake
@@ -69,7 +69,7 @@ h3. Expressed In Imperative Languages
 
 h4. Some Object-Oriented Dialect Of Java
 
-{% highlight java linenos %}
+{% highlight java %}
 Chef   chef       = new Chef();
 
 Oven   oven       = new Oven();
