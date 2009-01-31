@@ -70,7 +70,7 @@ h4. Some Object-Oriented Java Dialect
 
 {% highlight java %}
 public class Chef {
-  static BlueberryBuckle main(String args[]) {
+  public static BlueberryBuckle main(String args[]) {
     Chef   chef       = new Chef();
 
     Oven   oven       = new Oven();
