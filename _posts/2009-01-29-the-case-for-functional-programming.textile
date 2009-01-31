@@ -152,7 +152,7 @@ So, where's the program?
 
 Wait, we know it would look almost the same as that of Java, just much more awkward in large systems. No need to bother writing this, right?
 
-I know you can easily imagine how you would program the unimplemented functions, like mixProgressively(...). We can easily see how awkward it would be to write them without them fitting in the greater scheme of the object oriented paradigm.
+I know you can easily imagine how you would program the unimplemented functions, like mixProgressively(...). We can easily see how awkward it would be to write them without them fitting in the greater scheme of the object-oriented paradigm.
 
 According to John Smith, this version of the program is the _second_ *longest* and *hardest* to read, write, and maintain.
 
@@ -177,15 +177,21 @@ If we consider that:
 * each one of the program versions we looked at was successively closer to machine-level details, and
 * John's opinions were really true,
 
-then we can safely assume the following conclusion for these languages and those between them:
+then we can safely assume some conclusions for these languages and those between them.
+
+h4. Conclusion
 
 | Each time we step *closer* to the *machine-level* details... | ...we need to invest *more mental effort* and *more time* to write something. |
 | <br /> | <br /> |
 | Each time we step *farther* away from the *machine-level* details... | ...we need to invest *less mental effort* and *less time* to write something. |
 
+h5. Rantings
+
 Now, my question is, _who on earth_ decided that Java was far enough from machine-level details?
 
 In other words, who, after having known the enlightenment coming from stepping away from the machine-level details, decided it would be wrong to pursue further enlightenment by continuing to step away from the machine-level details? 
+
+Well, let's get back to constructive stuff.
 
 h4. Some Chef Dialect
 
