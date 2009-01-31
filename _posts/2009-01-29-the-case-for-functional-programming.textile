@@ -52,7 +52,7 @@ smoothCake      = mixProgressively [(Milk (Cup 1/2)),cream,base]
                        (Salt         (Teaspoon 1/2))]
 {% endhighlight %}
 
-Remark how this feels like mathematical equations.
+Remark how this code feels like mathematical equations.
 
 According to John Smith, this version of the program is the fastest and easiest to read, write, and maintain.
 
@@ -60,7 +60,7 @@ According to John Smith, this version of the program is the fastest and easiest 
 
 Hey, doesn't this mean that the Java version isn't the fastest and easiest one?
 
-Doesn't this feel weird to you? John may say this, but what's the heck anyway with these weird functional, academic-level languages, right? Such languages aren't fit for critical production usage. They would crumble under hardships. They're not battle-tested. They're not widely used. They're too hard to learn. Right?
+Doesn't this feel weird to you? John may say this, but what's the heck anyway with these weird functional, academic-level languages, right? Such languages aren't fit for critical production usage. They would crumble under hardship. They're not battle-tested. They're not widely used. They're too hard to learn. Right?
 
 Wait, John says these assumptions of ours are all false. How could it be? Let's skip to the next section, may we?
 
@@ -70,7 +70,7 @@ h4. Some Object-Oriented Java Dialect
 
 {% highlight java %}
 public class Chef {
-  BlueberryBuckle main(args[]) {
+  BlueberryBuckle main(String args[]) {
     Chef   chef       = new Chef();
 
     Oven   oven       = new Oven();
