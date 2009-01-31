@@ -6,11 +6,19 @@ date-updated: 30 Jan 2009
 
 h2. Comparing Different Language Levels
 
-For illustration purposes, we'll use the recipe I chose by asking Google's first result for @recipe@, and clicking on two links. The first one led me to a deserts page, and the second one to the yummy-looking "Blueberry Buckle":http://allrecipes.com/Recipe/Blueberry-Buckle/Detail.aspx.
+In this section, we will derive important conclusions.
 
-As you will see below, I have inlined the ingredients' measures directly in their preparation directions.
+To this avail, we can't use me. Why? Because I'm a Java and C++ programmer. Because I'm no expert. Because I'm not used to any other kind of programming than what is called Imperative Programming. So we'll use the services of someone who's uniquely qualified to derive objective conclusions. That is, John Smith. Why John Smith? Because, you see, John Smith is the only guy on the planet who's a complete expert of all the programming language dialects I'm going to mention in this article. More importantly and more impressively, John Smith learned those languages perfectly concurrently, and used them equally ever since. And yet, as if this was not enough qualifications for him, John has been spending 1 hour per working day since the start of his career in 1996, speaking about these different languages with his dozens of siblings who go by the same name as his', and guess what? They all share this very same background. They all think along the same lines as John's. Unbelievable, isn't it? Consequently, John Smith is, out of any possible doubt, the best person to help us reach meaningful conclusions about the fundamental differences of these languages. Doesn't it feel great to have John Smith with us to help us think this all through? Thanks John, I owe you one!
+
+Now that we have introduced John Smith, let's talk about the program we will use to compare our different languages.
+
+John said any program could do, so for illustration purposes, this program will be a recipe I chose by asking Google's first result for @recipe@, and clicking on two links. The first one led me to a deserts page, and the second one to the yummy-looking "Blueberry Buckle":http://allrecipes.com/Recipe/Blueberry-Buckle/Detail.aspx. This recipe's directions are what we will program.
+
+As you will see below, for the sake of simplicity, I have inlined the ingredients and their measures in their preparation directions.
 
 h3. Expressed In Natural Language
+
+h4. Some Dialect Of English
 
 # Preheat oven to 375 degrees. Grease one 8x8 inch pan.
 # Cream together 3/4 cup sugar, 1/4 cup shortening, and one egg.
@@ -18,11 +26,50 @@ h3. Expressed In Natural Language
 # To make topping: Combine 1/2 cup sugar, 1/3 cup flour, 1/2 teaspoon ground cinnamon, and 1/4 cup butter. Sprinkle over cake batter.
 # Bake at 375 degree for 25-30 minutes.
 
-h3. Expressed In An Imperative Language
+h3. Expressed In A Functional Language
 
-Here's the same recipe, this time expressed in some dialect of Java:
+h4. Some Dialect Of Haskell
 
-{% highlight java %}
+{% highlight haskell linenos %}
+blueberryBuckle = bake Oven 375 readyCake [25..30]
+
+readyCake       = sprinkle topping panCake
+  where topping = mix [(Sugar          (Cup 1/2)),
+                       (Flour          (Cup 1/3)),
+                       (GroundCinnamon (Teaspoon 1/2)),
+                       (Butter         (Cup 1/4))]
+
+panCake         = pour blueCake (Pan [8,8] Crisco)
+
+blueCake        = stir (BlueBerries (Cup 2)) smoothCake
+
+smoothCake      = mixProgressively [milk,cream,base]
+  where milk    = (Milk (Cup 1/2))
+        cream   = mix [(Sugar  (Cup 3/4)),
+                       (Crisco (Cup 1/4)),
+                       Egg]
+        base    = mix [(Flour        (Cup 2)),
+                       (BakingPowder (Teaspoon 2)),
+                       (Salt         (Teaspoon 1/2))]
+{% endhighlight %}
+
+Remark how this feels like mathematical equations.
+
+According to John Smith, this version of the program is the fastest and easiest to read, write, and maintain.
+
+(He already took a look at the other versions that follow.)
+
+Hey, doesn't this mean that the Java version isn't the fastest and easiest one?
+
+Doesn't this feel weird to you? John may say this, but what's the heck anyway with these weird functional, academic-level languages, right? Such languages aren't fit for critical production usage. They would crumble under hardships. They're not battle-tested. They're not widely used. They're too hard to learn. Right?
+
+Wait, John says these assumptions of ours are all false. How could it be? Let's skip to the next section, may we?
+
+h3. Expressed In Imperative Languages
+
+h4. Some Object-Oriented Dialect Of Java
+
+{% highlight java linenos %}
 Chef   chef       = new Chef();
 
 Oven   oven       = new Oven();
@@ -66,42 +113,94 @@ chef.waitFor(oven);
 return chef.bake(pan, oven, 25, 30);
 {% endhighlight %}
 
-h3. Expressed In An Equational Language
+Ah, home, sweet home. How reassuring is the smell of home, sweet home, isn't it?
 
-{% highlight haskell %}
-blueberryBuckle = Oven 375 readyCake [25..30]
+Now, try to imagine how you would program the unimplemented methods, like chef.mixProgressively(...). Try a little more. Form yourself a mental picture. Continue, it's not clear enough. Ok, now it looks like something.
 
-readyCake       = sprinkle topping panCake
-  where topping = mix [(Sugar          (Cup 1/2)),
-                       (Flour          (Cup 1/3)),
-                       (GroundCinnamon (Teaspoon 1/2)),
-                       (Butter         (Cup 1/4))]
+According to John Smith, this version of the program is the second fastest and easiest to read, write, and maintain.
 
-panCake         = pour blueCake (Pan [8,8] Crisco)
+John also mentions the unimplemented methods are much more involving to write than with our Dialect Of Haskell. What?
 
-blueCake        = stir (BlueBerries (Cup 2)) smoothCake
+Moreover, John mentions he uses quite a few faster- and easier-to-use languages than this one, that fit in the category of Object-Oriented Languages. Isn't this surprising, again? Let's not hear him more on Java.
 
-smoothCake      = mixProgressively [milk,cream,base]
-  where milk    = (Milk (Cup 1/2))
-        cream   = mix [(Sugar  (Cup 3/4)),
-                       (Crisco (Cup 1/4)),
-                       Egg]
-        base    = mix [(Flour        (Cup 2)),
-                       (BakingPowder (Teaspoon 2)),
-                       (Salt         (Teaspoon 1/2))]
-{% endhighlight %}
+h4. Some Procedural Dialect Of C
 
+So, where's the program? Wait, we know it would look almost the same as that of Object-Oriented Java, just much more awkward in large systems. No need to bother writing this, right?
+
+I know you can easily imagine how you would program the unimplemented functions, like mixProgressively(...). We can easily see how longer it would take us to write them without Java 5's new @for@ comprehensions, for example.
+
+According to John Smith, this version of the program is the second longest and hardest to read, write, and maintain.
+
+Rock on, John! We now understand each other. No need to spend more time with C. Let's see what's next.
+
+h4. Some Procedural Dialect Of Assembly Language
+
+So, where's the program? Wait, are you really expecting me to write this whole stuff in Assembly Language!? I mean, isn't it, by all means, completely evident how hard and long it would take me to write and debug this stuff?
+
+Try to imagine how you would program everything, including the unimplemented procedures, like mixProgressively. Wouldn't it be longer to do than with Java's @for@ comprehensions or C's @for@ statement, and all those neat features we're used to?
+
+Now, according to John Smith, this version of the program is the longest and hardest to read, write, and maintain.
+
+Ah! Rock on, John! We truly understand each other. Wait, that's right, we weren't used to think like you just some time ago...
 
 h3. Stop taking the Chef for a fool!
 
-h3. Who's The Chef?
+If we consider that:
+* each one of the program versions we looked at was successively closer to machine-level details, and
+* John's opinions were really true,
+then we can safely assume the following conclusion for these languages and those between them.
+
+| Each time we step closer to the machine-level details | we need to invest more mental effort and more time to write something. |
+| Each time we step farther away from the machine-level details | we need to invest less mental effort and less time to write something. |
+
+Now, my question is, who on earth decided that Some Object-Oriented Dialect Of Java was farther away enough from machine-level details?
+
+In other words, who, after having known the enlightenment coming from stepping away from the machine-level details, decided it would be wrong to pursue further enlightenment by continuing to step away from the machine-level details? 
+
+Also, who decided it would be good for the industry not to allow its employees to be enlightened at the same level as the academicians?
+
+h4. Who's The Chef?
+
+Obviously, the Chef is our programming language's compiler. Right? After all, whatever the level of programming language we used, we always wrote the instructions that it needed to produce what we want to eat.
+
+Of course, the more succinctly the compiler allows us to express what it is we want it to do for us, the better Chef it is.
+
+But isn't it us who programmed the behavior of the Chef, in our Object-Oriented version? Yes, that's right. Each one of Chef's unimplemented methods would have to be written by us. And each one of Chef's method calls, too, have been written by us. So again, we understand that whatever the paradigm and language we use to program a computer, we always end up writing everything the compiler doesn't write for us.
+
+In other words, we write the reciprocal of what the compiler writes:
+
+<pre>
+	ourCode + compilerCode = program
+	
+	If program = 1, we have:
+	
+	ourCode + compilerCode = 1
+</pre>
+
+So in reality, the Chef is made up of two entities. First, human-generated code. Second, compiler-generated code.
+
+Now, trust John, we don't want to be the Chef. That's why we don't use assembly language unless we really don't have any other choice. It's better to have a Chef at our service. And it's even much, much better if our Chef is intelligent enough that we don't have to go at lengths for him to understand what we truly want to eat.
+
+Therefore, if we could find a Chef that allows us to express our desires five times more succinctly and clearly than the one that comes with Java, wouldn't we be up for total enlightenment? We could either write five times faster the same programs as what we write today with Java, or take the same time that we're used to, but to write programs five times more interesting. Wow!
+
+h4. Some Dialect Of Chef Language
+
+<pre>
+Buckle (Blueberry)
+</pre>
+
+Isn't it worth to pursue such clarity and succinctness?
+
+Of course, no general-purpose programming language allows that level of expressivity (that is, without writing anything to back the expression given in the example.). This example is clearly an exaggeration of what the perfect programming language could be, but for a purpose. Illustrating how Domain-Specific Languages can be interesting. Such languages are restricted to their particular domain.
+
+Now, this is where we raise an interesting question. Which kind of programming language would be the most effective at writing DSLs? John says the answer is to be found somewhere in the category of declarative languages.
+
 
 h2. Is Formality What We Want?
 
 Then express it through a formal language!
 
 h2. Value Transparency, not Opaqueness
-
 
 h2. Fundamental Problems Of The Imperative Way
 
