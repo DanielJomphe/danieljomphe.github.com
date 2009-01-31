@@ -12,11 +12,12 @@ html, body {
  
 body {
   background-color: white;
-  font: 13.34px helvetica, arial, clean, sans-serif;
+  font: 12px helvetica, arial, clean, sans-serif;
   *font-size: small;
 }
  
 p {
+  margin-top: 0.75em 0;
   margin: 0.5em 0;
 }
  
