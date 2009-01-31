@@ -16,9 +16,9 @@ John said any program could do, so for illustration purposes, this program will 
 
 As you will see below, for the sake of simplicity, I have inlined the ingredients and their measures in their preparation directions.
 
-h3. Expressed In Natural Language
+h3. Natural Language
 
-h4. Some Dialect Of English
+h4. Some English Dialect
 
 # Preheat oven to 375 degrees. Grease one 8x8 inch pan.
 # Cream together 3/4 cup sugar, 1/4 cup shortening, and one egg.
@@ -26,27 +26,26 @@ h4. Some Dialect Of English
 # To make topping: Combine 1/2 cup sugar, 1/3 cup flour, 1/2 teaspoon ground cinnamon, and 1/4 cup butter. Sprinkle over cake batter.
 # Bake at 375 degree for 25-30 minutes.
 
-h3. Expressed In A Functional Language
+h3. Functional Language
 
-h4. Some Dialect Of Haskell
+h4. Some Haskell Dialect
 
 {% highlight haskell %}
 blueberryBuckle = bake Oven 375 readyCake [25..30]
 
 readyCake       = sprinkle topping panCake
-  where topping = mix [(Sugar          (Cup 1/2)),
-                       (Flour          (Cup 1/3)),
-                       (GroundCinnamon (Teaspoon 1/2)),
-                       (Butter         (Cup 1/4))]
+  where topping = mix [(Sugar        (Cup 1/2)),
+                       (Flour        (Cup 1/3)),
+                       (Cinnamon     (Teaspoon 1/2)),
+                       (Butter       (Cup 1/4))]
 
 panCake         = pour blueCake (Pan [8,8] Crisco)
 
-blueCake        = stir (BlueBerries (Cup 2)) smoothCake
+blueCake        = stir (BlueBerries  (Cup 2)) smoothCake
 
-smoothCake      = mixProgressively [milk,cream,base]
-  where milk    = (Milk (Cup 1/2))
-        cream   = mix [(Sugar  (Cup 3/4)),
-                       (Crisco (Cup 1/4)),
+smoothCake      = mixProgressively [(Milk (Cup 1/2)),cream,base]
+  where cream   = mix [(Sugar        (Cup 3/4)),
+                       (Crisco       (Cup 1/4)),
                        Egg]
         base    = mix [(Flour        (Cup 2)),
                        (BakingPowder (Teaspoon 2)),
@@ -65,52 +64,54 @@ Doesn't this feel weird to you? John may say this, but what's the heck anyway wi
 
 Wait, John says these assumptions of ours are all false. How could it be? Let's skip to the next section, may we?
 
-h3. Expressed In Imperative Languages
+h3. Imperative Language
 
-h4. Some Object-Oriented Dialect Of Java
+h4. Some Object-Oriented Java Dialect
 
 {% highlight java %}
-Chef   chef       = new Chef();
+class Chef {
+	Chef   chef       = new Chef();
 
-Oven   oven       = new Oven();
-Pan    pan        = new Pan(8, 8);
-Grease shortening = new Crisco();
+	Oven   oven       = new Oven();
+	Pan    pan        = new Pan(8, 8);
+	Grease shortening = new Crisco();
 
-chef.prepare(oven, 375);
-chef.prepare(pan,  shortening);
+	chef.prepare(oven, 375);
+	chef.prepare(pan,  shortening);
 
-Mixture cream = chef.mix(
- chef.prepare(new Sugar(),          Units.cup(3/4)),
- chef.prepare(shortening,           Units.cup(1/4)),
- chef.prepare(new Egg()));
+	Mixture cream = chef.mix(
+	 chef.prepare(new Sugar(),        Units.cup(3/4)),
+	 chef.prepare(shortening,         Units.cup(1/4)),
+	 chef.prepare(new Egg()));
 
-Mixture cake = chef.mix(
- chef.prepare(new Flour(),          Units.cup(2)),
- chef.prepare(new BakingPowder(),   Units.teaspoon(2)),
- chef.prepare(new Salt(),           Units.teaspoon(1/2)));
+	Mixture cake = chef.mix(
+	 chef.prepare(new Flour(),        Units.cup(2)),
+	 chef.prepare(new BakingPowder(), Units.teaspoon(2)),
+	 chef.prepare(new Salt(),         Units.teaspoon(1/2)));
 
-cake = chef.mixProgressively(
- cake,
- cream,
- chef.prepare(new Milk(),           Units.cup(1/2)));
+	cake = chef.mixProgressively(
+	 cake,
+	 cream,
+	 chef.prepare(new Milk(),         Units.cup(1/2)));
 
-cake = chef.stir(
- cake,
- chef.prepare(new Blueberries(),    Units.cup(2)));
+	cake = chef.stir(
+	 cake,
+	 chef.prepare(new Blueberries(),  Units.cup(2)));
 
-chef.pour(cake, pan);
+	chef.pour(cake, pan);
 
-Mixture topping = chef.mix(
- chef.prepare(new Sugar(),          Units.cup(1/2)),
- chef.prepare(new Flour(),          Units.cup(1/3)),
- chef.prepare(new GroundCinnamon(), Units.teaspoon(1/2)),
- chef.prepare(new Butter(),         Units.cup(1/4)));
+	Mixture topping = chef.mix(
+	 chef.prepare(new Sugar(),        Units.cup(1/2)),
+	 chef.prepare(new Flour(),        Units.cup(1/3)),
+	 chef.prepare(new Cinnamon(),     Units.teaspoon(1/2)),
+	 chef.prepare(new Butter(),       Units.cup(1/4)));
 
-chef.sprinkle(topping, pan);
+	chef.sprinkle(topping, pan);
 
-chef.waitFor(oven);
+	chef.waitFor(oven);
 
-return chef.bake(pan, oven, 25, 30);
+	return chef.bake(pan, oven, 25, 30);
+}
 {% endhighlight %}
 
 Ah, home, sweet home. How reassuring is the smell of home, sweet home, isn't it?
@@ -119,11 +120,11 @@ Now, try to imagine how you would program the unimplemented methods, like chef.m
 
 According to John Smith, this version of the program is the second fastest and easiest to read, write, and maintain.
 
-John also mentions the unimplemented methods are much more involving to write than with our Dialect Of Haskell. What?
+John also mentions the unimplemented methods are much more involving to write than with our Haskell dialect. What?
 
 Moreover, John mentions he uses quite a few faster- and easier-to-use languages than this one, that fit in the category of Object-Oriented Languages. Isn't this surprising, again? Let's not hear him more on Java.
 
-h4. Some Procedural Dialect Of C
+h4. Some Procedural C Dialect
 
 So, where's the program? Wait, we know it would look almost the same as that of Object-Oriented Java, just much more awkward in large systems. No need to bother writing this, right?
 
@@ -133,7 +134,7 @@ According to John Smith, this version of the program is the second longest and h
 
 Rock on, John! We now understand each other. No need to spend more time with C. Let's see what's next.
 
-h4. Some Procedural Dialect Of Assembly Language
+h4. Some Procedural Assembly Language Dialect
 
 So, where's the program? Wait, are you really expecting me to write this whole stuff in Assembly Language!? I mean, isn't it, by all means, completely evident how hard and long it would take me to write and debug this stuff?
 
@@ -150,10 +151,10 @@ If we consider that:
 * John's opinions were really true,
 then we can safely assume the following conclusion for these languages and those between them.
 
-| Each time we step closer to the machine-level details | we need to invest more mental effort and more time to write something. |
-| Each time we step farther away from the machine-level details | we need to invest less mental effort and less time to write something. |
+| Each time we step closer to the machine-level details... | we need to invest more mental effort and more time to write something. |
+| Each time we step farther away from the machine-level details... | we need to invest less mental effort and less time to write something. |
 
-Now, my question is, who on earth decided that Some Object-Oriented Dialect Of Java was farther away enough from machine-level details?
+Now, my question is, who on earth decided that Java was farther away enough from machine-level details?
 
 In other words, who, after having known the enlightenment coming from stepping away from the machine-level details, decided it would be wrong to pursue further enlightenment by continuing to step away from the machine-level details? 
 
@@ -170,11 +171,11 @@ But isn't it us who programmed the behavior of the Chef, in our Object-Oriented 
 In other words, we write the reciprocal of what the compiler writes:
 
 <pre>
-	ourCode + compilerCode = program
+ourCode + compilerCode = program
+
+If program = 1, we have:
 	
-	If program = 1, we have:
-	
-	ourCode + compilerCode = 1
+ourCode + compilerCode = 1
 </pre>
 
 So in reality, the Chef is made up of two entities. First, human-generated code. Second, compiler-generated code.
@@ -183,7 +184,7 @@ Now, trust John, we don't want to be the Chef. That's why we don't use assembly 
 
 Therefore, if we could find a Chef that allows us to express our desires five times more succinctly and clearly than the one that comes with Java, wouldn't we be up for total enlightenment? We could either write five times faster the same programs as what we write today with Java, or take the same time that we're used to, but to write programs five times more interesting. Wow!
 
-h4. Some Dialect Of Chef Language
+h4. Some Chef Dialect
 
 <pre>
 Buckle (Blueberry)
