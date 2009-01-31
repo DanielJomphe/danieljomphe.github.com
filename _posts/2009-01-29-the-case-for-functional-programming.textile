@@ -239,13 +239,6 @@ ourCode      = program - compilerCode
 compilerCode = program - ourCode
 </pre>
 
-Since we don't care about @program@ as long as it's constant, we can write:
-
-<pre>
-ourCode      = -compilerCode
-compilerCode = -ourCode
-</pre>
-
 And we've reached the reciprocal.
 
 Now, if this doesn't make sense at all to you, there's a good reason for it. _Any_ successful high-schooler could beat my long-forgotten maths skills. Therefore, please correct me if I'm wrong in any way.
