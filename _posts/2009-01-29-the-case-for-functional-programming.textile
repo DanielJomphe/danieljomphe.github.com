@@ -4,6 +4,8 @@ title:        The Case For Functional Programming
 date-updated: 31 Jan 2009
 ---
 
+_Please consider the following as draft-quality stuff. I'm in the process of writing it and ramping up its average quality by a serious notch or two._
+
 h2. Comparing Different Language Levels
 
 In this section, we will derive important conclusions from real life observations.
