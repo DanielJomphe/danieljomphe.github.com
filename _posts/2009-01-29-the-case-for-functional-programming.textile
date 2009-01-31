@@ -50,6 +50,8 @@ h3. Functional Language
 
 h4. Some Haskell Dialect
 
+Remark how this code feels like mathematical equations:
+
 {% highlight haskell %}
 blueberryBuckle = bake Oven 375 readyCake [25..30]
 
@@ -72,8 +74,6 @@ smoothCake      = mixProgressively [(Milk (Cup 1/2)),cream,base]
                        (Salt         (Teaspoon 1/2))]
 {% endhighlight %}
 
-Remark how this code feels like mathematical equations.
-
 According to John Smith, this version of the program is _the_ *fastest* and *easiest* to read, write, and maintain.
 
 (He already took a look at the other versions that follow. What a dude!)
@@ -87,6 +87,8 @@ Wait, John says these assumptions of ours are all false. How could it be? Let's 
 h3. Imperative Language
 
 h4. Some Object-Oriented Java Dialect
+
+Ah, _home, sweet home_. How reassuring is the smell of _home, sweet home_, isn't it?
 
 {% highlight java %}
 public class Chef {
@@ -136,8 +138,6 @@ public class Chef {
 }
 {% endhighlight %}
 
-Ah, _home, sweet home_. How reassuring is the smell of _home, sweet home_, isn't it?
-
 Now, try to imagine how you would program the unimplemented methods, like chef.mixProgressively(...). Try a little more. Form yourself a mental picture. Continue, it's not clear enough. Ok, now it looks like something.
 
 According to John Smith, this version of the program is the _second_ *fastest* and *easiest* to read, write, and maintain.
@@ -148,7 +148,9 @@ Moreover, John mentions he uses quite a few faster- and easier-to-use languages 
 
 h4. Some Procedural C Dialect
 
-So, where's the program? Wait, we know it would look almost the same as that of Java, just much more awkward in large systems. No need to bother writing this, right?
+So, where's the program?
+
+Wait, we know it would look almost the same as that of Java, just much more awkward in large systems. No need to bother writing this, right?
 
 I know you can easily imagine how you would program the unimplemented functions, like mixProgressively(...). We can easily see how awkward it would be to write them without them fitting in the greater scheme of the object oriented paradigm.
 
@@ -158,7 +160,9 @@ Rock on, John! We now understand each other. No need to spend more time with C. 
 
 h4. Some Procedural Assembly Language Dialect
 
-So, where's the program? Wait, did you really expect me to write this whole stuff in assembly language!? I mean, isn't it, by all means, completely evident how hard and long it would take me to write and debug this stuff?
+So, where's the program?
+
+Wait, did you really expect me to write this whole stuff in assembly language!? I mean, isn't it, by all means, completely evident how hard and long it would take me to write and debug this stuff?
 
 Try to imagine how you would program everything, including the unimplemented procedures, like mixProgressively. Wouldn't it be longer to do than with Java's @for@ comprehensions or C's @for@ statement, and all those neat features we're used to?
 
@@ -169,10 +173,11 @@ Ah! Rock on, John! We truly understand each other. _Wait_, that's right, we were
 h3. Stop taking the Chef for a fool!
 
 If we consider that:
+
 * each one of the program versions we looked at was successively closer to machine-level details, and
 * John's opinions were really true,
 
-then we can safely assume the following conclusion for these languages and those between them.
+then we can safely assume the following conclusion for these languages and those between them:
 
 | Each time we step *closer* to the *machine-level* details... | ...we need to invest *more mental effort* and *more time* to write something. |
 | <br /> | <br /> |
@@ -184,23 +189,29 @@ In other words, who, after having known the enlightenment coming from stepping a
 
 h4. Some Chef Dialect
 
+Isn't it worth to pursue such clarity and succinctness?
+
 <pre>
 Buckle (Blueberry)
 </pre>
 
-Isn't it worth to pursue such clarity and succinctness?
-
 Of course, no general-purpose programming language allows that level of expressivity (that is, without writing anything to back the expression given in the example). This example is clearly an exaggeration of what the perfect programming language could be. It's meant to illustrate how Domain-Specific Languages (DSLs) can be interesting.
 
-Now, this is where we raise an interesting question. Which kind of programming language would be the most effective at writing DSLs? John says the answer is to be found somewhere in the category of declarative languages. Functional languages are a category of declarative languages.
+Now, this is where we raise an interesting question. Which kind of programming language would be the most effective at writing DSLs?
+
+John says the answer is to be found somewhere in the category of declarative languages. Functional languages are a category of declarative languages.
 
 h4. Who's The Chef?
 
-Who's the one taken for a fool?
+Or, in another words, who's the one taken for a fool?
+
+h5. It's The Compiler!
 
 Obviously, the Chef is our programming language's compiler. Right? After all, whatever was the level of programming language we used, we always wrote the instructions that it needed to produce what we wanted to eat.
 
 Of course, the more succinctly the compiler allows us to express what we want, the better Chef it is.
+
+h5. The Dynamics Of Compilers
 
 But it's us, isn't it, who programmed the behavior of the Chef, in our object-oriented version? Yes, that's right. Each one of Chef's unimplemented methods would have to be written by us. And each one of Chef's method calls, too, have been written by us. And in the non-object-oriented languages, although we didn't explicitly mention Chef, we were still writing equivalent code. So we understand that whatever the paradigm and language we use to program a computer, we always end up writing everything the compiler doesn't write for us.
 
@@ -214,7 +225,11 @@ Given program = 1, we have:
 ourCode + compilerCode = 1
 </pre>
 
+h5. Then Who's The Compiler?
+
 So in reality, the Chef is made up of two entities. First, human-generated code. Second, compiler-generated code. In other words, the compiler is made up of a human compiler and a machine compiler. Hey, don't call me a compiler, that's _gross_!
+
+h5. Our Choice
 
 Now, trust John, we don't want to be the Chef. That's why we don't use assembly language unless we really don't have any other choice. It's better to have a Chef at our service. And it's even much, much better if our Chef is intelligent enough that we don't have to go at lengths for him to understand what we truly want to eat.
 
