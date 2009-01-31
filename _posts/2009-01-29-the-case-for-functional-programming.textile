@@ -1,7 +1,7 @@
 ---
 layout: post
 title:        The Case For Functional Programming
-date-updated: 30 Jan 2009
+date-updated: 31 Jan 2009
 ---
 
 h2. Comparing Different Language Levels
@@ -28,21 +28,23 @@ Now, consequently, allow me to truthfully claim that John Smith is, _out of any 
 
 Doesn't it feel great to have John Smith with us to help us think this all through? Thanks John, I owe you one!
 
+h3. Natural Language - The Testbed
+
 Now that we have introduced John Smith, let's talk about the program we will use to compare our different languages.
 
 John said any program could do, so for illustration purposes, this program will be a recipe I chose by asking Google's first result for @recipe@, and clicking on two links. The first one led me to a deserts page, and the second one to the yummy-looking "Blueberry Buckle":http://allrecipes.com/Recipe/Blueberry-Buckle/Detail.aspx. This recipe's directions are what we will program.
 
-As you will see below, for the sake of simplicity, I have inlined the ingredients and their measures in their preparation directions. Also, I have left some functions undefined.
-
-h3. Natural Language
-
 h4. Some English Dialect
+
+For the sake of simplicity, I have inserted the ingredients and their measures right into their preparation directions:
 
 # Preheat oven to 375 degrees. Grease one 8x8 inch pan.
 # Cream together 3/4 cup sugar, 1/4 cup shortening, and one egg.
 # In a separate bowl mix together 2 cups flour, 2 teaspoons baking powder, and 1/2 teaspoon salt. Stir into sugar mixture, alternating with 1/2 cup milk. Stir in 2 cups fresh blueberries. Pour into greased 8x8 inch pan.
 # To make topping: Combine 1/2 cup sugar, 1/3 cup flour, 1/2 teaspoon ground cinnamon, and 1/4 cup butter. Sprinkle over cake batter.
 # Bake at 375 degree for 25-30 minutes.
+
+Now, let's see how this may be programmed. Please note that in the following versions of these directions, I have, out of pure laziness, left some functions undefined.
 
 h3. Functional Language
 
@@ -169,6 +171,7 @@ h3. Stop taking the Chef for a fool!
 If we consider that:
 * each one of the program versions we looked at was successively closer to machine-level details, and
 * John's opinions were really true,
+
 then we can safely assume the following conclusion for these languages and those between them.
 
 | Each time we step *closer* to the *machine-level* details... | ...we need to invest *more mental effort* and *more time* to write something. |
