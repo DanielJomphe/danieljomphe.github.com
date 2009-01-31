@@ -261,6 +261,31 @@ Now, let's put aside our own conclusions to hear other kinds of wisdom.
 
 h3. 1977 - John Backus
 
+You might remember John Backus for the Backus Normal Form and Backus-Naur Form. But that's not all that came out of him.
+
+Among the notable programming languages John Backus created, we should think of the first high-level programming language: FORTRAN, which was released in 1958 and succeeded on the market by incredible standards.
+
+Interestingly, FORTRAN is an imperative language. So why bring John Backus in the debate? Because although FORTRAN was really a great advance from assembly language, John Backus later realized how imperative languages were fundamentally unworthy of the attention they were given. And I'm not overemphasizing his thoughts by any means, believe me. Let's hear him:
+
+bq. Conventional programming languages are growing ever more enormous, but not stronger. Inherent defects at the most basic level cause them to be both fat and weak:
+
+# their primitive word-at-a-time style of programming inherited from their common ancestor--the von Neumann computer,
+# their close coupling of semantics to state transitions,
+# their division of programming into a world of expressions and a world of statements,
+# their inability to effectively use powerful combining forms for 
+building new programs from existing ones, and
+# their lack of useful mathematical properties for reasoning about programs.
+
+_Ouch!_ I don't think one could find a harshest critique of his own work!
+
+bq. Each new language claims new and fashionable features, [...] but the plain fact is that few languages make programming sufficiently cheaper or more reliable to justify the cost of producing and learning to use them.
+
+Well, this most certainly explains why Python and Ruby have not superseded Java.
+
+bq. Since large increases in size bring only small increases in power, smaller, more elegant languages [...] continue to be popular. But there is a desperate need for a powerful methodology to help us think about programs, and no conventional language even begins to meet that need. In fact, conventional languages create unnecessary confusion in the way we think about programs. [...] Although I refer to conventional languages as "von Neumann languages" to take note of their origin and style, I do not, of course, blame the great mathematician for their complexity. In fact, some might say that I bear some responsibility for that problem.
+
+See?
+
 h4. Bio
 
 *** "Wikipedia's Page":http://en.wikipedia.org/wiki/John_Backus
