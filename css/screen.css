@@ -13,7 +13,7 @@ html, body {
 body {
   background-color: white;
   font: 13px helvetica, arial, clean, sans-serif;
-  font-color: 001;
+  font-color: #001;
   *font-size: small;
 }
  
@@ -23,8 +23,8 @@ p {
 }
 
 blockquote {
-  font-size: 90%;
-  font-color: 000;
+  font-size: 95%;
+  font-color: #000;
 }
  
 a {
