@@ -13,12 +13,18 @@ html, body {
 body {
   background-color: white;
   font: 13px helvetica, arial, clean, sans-serif;
+  font-color: 001;
   *font-size: small;
 }
  
 p {
   margin-top: 0.75em 0;
   margin: 0.5em 0;
+}
+
+blockquote {
+  font-size: 90%;
+  font-color: 000;
 }
  
 a {
