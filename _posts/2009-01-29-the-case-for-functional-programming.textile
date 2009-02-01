@@ -267,13 +267,13 @@ Among the notable programming languages John Backus created, we should think of 
 
 Interestingly, FORTRAN is an imperative language. So why bring John Backus in the debate? Because although FORTRAN was really a great advance from assembly language, John Backus later realized how imperative languages were fundamentally unworthy of the attention they were given. And I'm not overemphasizing his thoughts by any means, believe me. Let's hear him:
 
-bq. Conventional programming languages are growing ever more enormous, but not stronger. Inherent defects at the most basic level cause them to be both fat and weak:
-# their primitive word-at-a-time style of programming inherited from their common ancestor--the von Neumann computer,
-# their close coupling of semantics to state transitions,
-# their division of programming into a world of expressions and a world of statements,
-# their inability to effectively use powerful combining forms for 
-building new programs from existing ones, and
-# their lack of useful mathematical properties for reasoning about programs.
+bq. Conventional programming languages are growing ever more enormous, but not stronger. Inherent defects at the most basic level cause them to be both fat and weak:<br />&nbsp;&nbsp;
+1. their primitive word-at-a-time style of programming inherited from their common ancestor--the von Neumann computer,<br />&nbsp;&nbsp;
+2. their close coupling of semantics to state transitions,<br />&nbsp;&nbsp;
+3. their division of programming into a world of expressions and a world of statements,<br />&nbsp;&nbsp;
+4. their inability to effectively use powerful combining forms for 
+building new programs from existing ones, and<br />&nbsp;&nbsp;
+5. their lack of useful mathematical properties for reasoning about programs.
 
 _Ouch!_ I don't think one could find a harshest critique of his own work!
 
