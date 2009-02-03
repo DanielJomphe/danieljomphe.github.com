@@ -261,9 +261,9 @@ h3. 1977 - John Backus
 
 Here are a few reasons why you might already know of John Backus:
 
-* He created the first compiler, along with the first high-level programming language: FORTRAN (1958).
+* He created the first compiler and high-level programming language: FORTRAN (1958).
 * He's also known for his work on other early languages, including ALGOL.
-* In 1959, he contributed the definition of the *Backus Normal Form* (BNF), which was later improved by Peter Naur, becoming the *Backus-Naur Form*.
+* In 1959, he contributed the definition of the Backus Normal Form (BNF), which was later improved by Peter Naur, becoming the Backus-Naur Form.
 * We were reminded of his life's works when he died in 2007.
 
 Now, why do you think I'm mentioning the creator of the first high-level programming language?
@@ -294,31 +294,27 @@ h4. On Imperative Programming Languages
 
 Now, let's see exactly how Backus described, in his famous lecture, imperative programming languages:
 
-bq. Conventional programming languages are growing _ever more enormous, but not stronger_. *Inherent defects at the most basic level* cause them to be both *fat* and _weak_:<ol><li>their primitive word-at-a-time style of programming inherited from their common ancestor--the von Neumann computer,</li><li>their close coupling of semantics to state transitions,</li><li>their division of programming into a world of expressions and a world of statements,</li><li>their inability to effectively use powerful combining forms for building new programs from existing ones, and</li><li>their lack of useful mathematical properties for reasoning about programs.</li></ol>
+bq. Conventional programming languages are growing _ever more enormous, but not stronger_. *Inherent defects at the most basic level* cause them to be both *fat* and *weak*:<ol><li>their primitive word-at-a-time style of programming inherited from their common ancestor--the von Neumann computer,</li><li>their close coupling of semantics to state transitions,</li><li>their division of programming into a world of expressions and a world of statements,</li><li>their inability to effectively use powerful combining forms for building new programs from existing ones, and</li><li>their lack of useful mathematical properties for reasoning about programs.</li></ol>
 
 _Ouch!_ One could hardly find a harder critique of his own work!
 
 If you would like to understand precisely what he means by these five arguments, you should definitely read at least the first 7 pages of his paper.
 
-bq. Each new language claims new and fashionable features, [...] but the plain fact is that few languages make programming sufficiently cheaper or more reliable to justify the cost of producing and learning to use them.
-
-Interestingly, this probably explains why Python hasn't superseded Java, although it was arguably much more mature at the eve of the new millenium than Java was. Well, languages don't sell only based on their worthiness.
-
-bq. Since large increases in size bring only small increases in power, smaller, more elegant languages [...] continue to be popular. But there is a desperate need for a powerful methodology to help us think about programs, and no conventional language even begins to meet that need. In fact, conventional languages create unnecessary confusion in the way we think about programs. [...] Although I refer to conventional languages as "von Neumann languages" to take note of their origin and style, I do not, of course, blame the great mathematician for their complexity. In fact, some might say that I bear some responsibility for that problem.
+bq. Each new language claims new and fashionable features, [...] but the plain fact is that few languages make programming sufficiently cheaper or more reliable to justify the cost of producing and learning to use them. [...] Since large increases in size bring only small increases in power, smaller, more elegant languages [...] continue to be popular. But there is a desperate need for a powerful methodology to help us think about programs, and no conventional language even begins to meet that need. In fact, conventional languages create unnecessary confusion in the way we think about programs. [...] Although I refer to conventional languages as "von Neumann languages" to take note of their origin and style, I do not, of course, blame the great mathematician for their complexity. In fact, some might say that I bear some responsibility for that problem.
 
 See? And that's not all.
 
 bq. Before discussing alternatives to von Neumann languages, let me remark that I regret the need for the above negative and not very precise discussion of these languages. But the complacent acceptance most of us give to these enormous, weak languages has puzzled and disturbed me for a long time. I am disturbed because that acceptance has consumed a vast effort toward making von Neumann languages fatter that might have been better spent in looking for new structures. For this reason I have tried to analyze some of the basic defects of conventional languages and show that those defects cannot be resolved unless we discover a new kind of language framework.
 
-h4. Bio
+h4. References
 
-* "Wikipedia's Page":http://en.wikipedia.org/wiki/John_Backus
 * "Alex Aiken's Memorial":http://theory.stanford.edu/~aiken/other/backus.pdf
-* "IBM's Exhibit":http://www-03.ibm.com/ibm/history/exhibits/builders/builders_backus.html
-
-h4. Paper
-
 * "Can Programming Be Liberated from the von Neumann Style?":theory.stanford.edu/~aiken/other/backus.pdf
+
+h4. Further Reading
+
+* "Wikipedia: John Backus":http://en.wikipedia.org/wiki/John_Backus
+* "IBM: Builders Exhibit":http://www-03.ibm.com/ibm/history/exhibits/builders/builders_backus.html
 
 h3. 1982 - David Turner
 
@@ -326,22 +322,24 @@ h3. 1984 - John Hughes
 
 * "Why Functional Programming Matters":www.address.com
 
-h2. Is Formality What We Want?
+h2. Future stuff...
 
-Then express it through a formal language!
+...
 
-h2. Value Transparency, not Opaqueness
+Formality
 
-h2. Fundamental Problems Of The Imperative Way
+Value Transparency, not Opaqueness
 
-h3. The Assignment Statement
+h3. Fundamental Problems Of The Imperative Way
+
+h4. The Assignment Statement
 
 Turner, p.5, "It is because of this that it is so difficult to reason about programs. Since expressions can change their value through time, equality is not substitutive. Indeed, in a programming language it does not even have to be true that an expression is equal to itself (because the presence of side effects may mean that evaluating the same expression twice in succession can produce two different answers)! In general it is not possible to reason about such programs on the basis of a static analysis of the program text - instead we have to think of the program dynamically and follow the detailed flow of control [...]"
 
-h2. The Imperative Coalition's Last Hopes
+h3. The Imperative Coalition's Last Hopes
 
-h3. Object Orientation
+h4. Object Orientation
 
-h3. Higher-Order Functions
+h4. Higher-Order Functions
 
-h3. Limits
+h4. Limits
