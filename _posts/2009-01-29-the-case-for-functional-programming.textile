@@ -309,7 +309,7 @@ bq. Before discussing alternatives to von Neumann languages, let me remark that 
 h4. References
 
 * "Alex Aiken's Memorial":http://theory.stanford.edu/~aiken/other/backus.pdf
-* "Can Programming Be Liberated from the von Neumann Style?":http://theory.stanford.edu/~aiken/other/backus.pdf
+* "Can Programming Be Liberated from the von Neumann Style?":http://google-it-for-now.com
 
 h4. Further Reading
 
