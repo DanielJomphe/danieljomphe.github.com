@@ -7,11 +7,22 @@ date-updated: 02 Feb 2009
 _Please consider the following as draft-quality stuff._<br />
 _I'm in the process of writing it and ramping up its average quality by a serious notch or two._
 
-h2. Comparing Different Language Levels
+h2(#contents). What Is Discussed Here?
+
+* "Comparing Different Language Levels":#comparing
+** "How To Reach Truthful Conclusions":#how-to-conclude
+** "Natural Language - The Testbed":#natural-language
+** "Declarative Language":#declarative-language
+** "Imperative Language":#imperative-language
+** "Stop taking the Chef for a fool!":#chef-is-no-fool
+* "Prior Comparisons Of Language Levels":#prior-comparisons
+** "1977 - John Backus":#backus
+
+h2(#comparing). Comparing Different Language Levels
 
 In this section, we will derive important conclusions from real life observations.
 
-h3. How To Reach Truthful Conclusions
+h3(#how-to-conclude). How To Reach Truthful Conclusions
 
 To this avail, we need to pick someone very special.
 
@@ -31,7 +42,7 @@ Now, consequently, allow me to truthfully claim that John Smith is, _out of any 
 
 Doesn't it feel great to have John Smith with us to help us think this all through? Thanks John, I owe you one!
 
-h3. Natural Language - The Testbed
+h3(#natural-language). Natural Language - The Testbed
 
 Now that we have introduced John Smith, let's talk about the program we will use to compare our different languages.
 
@@ -49,33 +60,45 @@ For the sake of simplicity, I have inserted the ingredients and their measures r
 
 Now, let's see how this may be programmed. Please note that in the following versions of these directions, I have, out of pure laziness, left some functions undefined.
 
-h3. Functional Language
+h3(#declarative-language). Declarative Language
+
+Understanding the concept of declarative programming is useful to see the simplicity of functional programming, since the latter is a special case of the former. Therefore, the following definition should help.
+
+One could think of a declarative language as one which expresses computations as _a hierarchy of result descriptions_.
+
+Following this line of thinking, functional programming expresses computations as _a hierarchy of function applications_, where each function is responsible of producing a result.
+
+When a programmer uses the functional style, he is mostly concerned with defining and combining functions and their applications.
+
+Since the mechanism of function application, or in other words, function _call_, is universally known, functional programming is far from being inaccessible. And that's precisely what might come as a surprise to one who has heard functional programming is a weird way of thinking of the process of writing software.
 
 h4. Some Haskell Dialect
 
-Remark how this code feels like mathematical equations:
+Remark how this code feels like mathematical equations.
+
+Note that I have taken the liberty to personalize Haskell's syntax so that it reads more easily to the eyes of a java-like language programmer:
 
 {% highlight haskell %}
-blueberryBuckle = bake Oven 375 readyCake [25..30]
+blueberryBuckle = bake(Oven(375), readyCake([25..30]))
 
-readyCake       = sprinkle topping panCake
-  where topping = mix [(Sugar        (Cup 1/2)),
-                       (Flour        (Cup 1/3)),
-                       (Cinnamon     (Teaspoon 1/2)),
-                       (Butter       (Cup 1/4))]
+readyCake       = sprinkle(topping, panCake)
 
-panCake         = pour blueCake (Pan [8,8] Crisco)
+topping         = mix([Sugar(Cup(1/2)),         Flour(Cup(1/3)),
+                       Cinnamon(Teaspoon(1/2)), Butter(Cup(1/4))])
 
-blueCake        = stir (BlueBerries  (Cup 2)) smoothCake
+panCake         = pour(blueCake(Pan([8,8], Crisco)))
 
-smoothCake      = mixProgressively [(Milk (Cup 1/2)),cream,base]
-  where cream   = mix [(Sugar        (Cup 3/4)),
-                       (Crisco       (Cup 1/4)),
-                       Egg]
-        base    = mix [(Flour        (Cup 2)),
-                       (BakingPowder (Teaspoon 2)),
-                       (Salt         (Teaspoon 1/2))]
+blueCake        = stir(BlueBerries(Cup(2)), smoothCake) 
+
+smoothCake      = mixProgressively([Milk((Cup 1/2)), cream, base])
+
+cream           = mix([Sugar(Cup(3/4)), Crisco(Cup(1/4)), Egg()])
+base            = mix([Flour(Cup(2)), BakingPowder(Teaspoon(2)), Salt(Teaspoon(1/2))])
 {% endhighlight %}
+
+This code uses only one programming technique, which is the already mentioned mechanism of function application.
+
+Each function name is written on the left side of @=@, which means "... is described as ...". Obviously, the right side of @=@ describes what computations this function depends on to produce its result.
 
 According to John Smith, this version of the program is _the_ *fastest* and *easiest* to read, write, and maintain.
 
@@ -87,7 +110,13 @@ Doesn't this feel weird to you? John may say this, but what's the heck anyway wi
 
 Wait, John says these assumptions of ours are all false. How could it be? Let's skip to the next section, may we?
 
-h3. Imperative Language
+h3(#imperative-language). Imperative Language
+
+Aside from the fact that conventional languages are said to be imperative, how could one define this concept?
+
+One could think of an imperative language as one which expresses computations as _a sequence of manipulations which must imperatively be followed, affecting the state of memory so as to progressively build a result_.
+
+When a programmer uses the imperative style, he is mostly concerned with the interactions of the manipulations with the progressively-built result.
 
 h4. Some Object-Oriented Java Dialect
 
@@ -173,7 +202,7 @@ Now, according to John Smith, this version of the program is _the_ *longest* and
 
 Ah! Rock on, John! We truly understand each other. _Wait_, that's right, we weren't used to think like you just some time ago...
 
-h3. Stop taking the Chef for a fool!
+h3(#chef-is-no-fool). Stop taking the Chef for a fool!
 
 If we consider that:
 
@@ -253,11 +282,15 @@ Therefore, if we could find a Chef that allows us to express our desires five ti
 
 Wow! I want to work with a better Chef. Don't you?
 
-h2. Prior Comparisons Of Language Levels
+h2(#prior-comparisons). Prior Comparisons Of Language Levels
 
 Now, let's put aside our own conclusions to hear other kinds of wisdom.
 
-h3. 1977 - John Backus
+After all, who knows if John Smith really is that credible?
+
+h3(#backus). 1977 - John Backus
+
+We are now reaching one of the most interesting parts of this article.
 
 Here are a few reasons why you might already know of John Backus:
 
@@ -305,6 +338,10 @@ bq. Each new language claims new and fashionable features, [...] but the plain f
 See? And that's not all.
 
 bq. Before discussing alternatives to von Neumann languages, let me remark that I regret the need for the above negative and not very precise discussion of these languages. But the complacent acceptance most of us give to these enormous, weak languages has puzzled and disturbed me for a long time. I am disturbed because that acceptance has consumed a vast effort toward making von Neumann languages fatter that might have been better spent in looking for new structures. For this reason I have tried to analyze some of the basic defects of conventional languages and show that those defects cannot be resolved unless we discover a new kind of language framework.
+
+Reading Backus' paper has been a profoundly enlightening experience for me.
+
+I definitely suggest you schedule some time to read at least the first 12 pages of his lecture. The first 7 pages will shed out more light on what's wrong with imperative languages; then, the next pages will explain how a language can be implemented on top of a very small number of sound and simple concepts that can be used and powerfully combined in all sorts of natural ways to describe computations.
 
 h4. References
 
