@@ -1,7 +1,7 @@
 ---
 layout: post
 title:        The Case For Functional Programming
-date-updated: 02 Feb 2009
+date-updated: 03 Feb 2009
 ---
 
 _Please consider the following as draft-quality stuff._<br />
@@ -93,7 +93,8 @@ blueCake        = stir(BlueBerries(Cup(2)), smoothCake)
 smoothCake      = mixProgressively([Milk((Cup 1/2)), cream, base])
 
 cream           = mix([Sugar(Cup(3/4)), Crisco(Cup(1/4)), Egg()])
-base            = mix([Flour(Cup(2)), BakingPowder(Teaspoon(2)), Salt(Teaspoon(1/2))])
+base            = mix([Flour(Cup(2)),   BakingPowder(Teaspoon(2)),
+                       Salt(Teaspoon(1/2))])
 {% endhighlight %}
 
 This code uses only one programming technique, which is the already mentioned mechanism of function application.
