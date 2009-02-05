@@ -3,7 +3,7 @@ layout: nil
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Mikael Lind</title>
+  <title>Daniel Jomphe</title>
   <link href="http://danieljomphe.github.com/atom.xml" rel="self"/>
   <link href="http://danieljomphe.github.com/"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
@@ -17,7 +17,7 @@ layout: nil
       <title>{{ post.title }}</title>
       <link href="http://danieljomphe.github.com{{ post.url }}"/>
       <updated>{{ post.date | date_to_xmlschema }}</updated>
-      <id>http://elemel.github.com{{ post.id }}</id>
+      <id>http://danieljomphe.github.com{{ post.id }}</id>
       <content type="html">{{ post.content | xml_escape }}</content>
     </entry>
   {% endfor %}
