@@ -354,6 +354,43 @@ h4. Further Reading
 
 h3. 1982 - David Turner
 
+John Backus has often been caught saying of himself that he's lazy. It was one of his ways of explaining why he created high level languages.
+
+Interestingly, though, the computer scientist the most remembered when it comes to laziness isn't Backus, but David Turner, who brought us the concept of lazy evaluation. We also owe him a great deal for the concept of purely functional programming.
+
+Both the purity and laziness concepts are central to what he wrote in 1981-1982 in his paper called _Recursion Equations As A Programming Language_.
+
+bq. The importance of applicative [functional] languages lies in the fact that they hold out the promise of being able to solve both of these problems at the same time [software costs and taking advantage of a very large degree of concurrency in the machine]. In both cases the key step is the abolition of the assignment statement, and with it the notion of sequencing.
+
+bq. When we compare our programming languages with all previous mathematical notation, however, the differences are very striking. Mathematical notation has evolved over many centuries and obeys certain basic rules, which are common to every area of mathematics, and which give mathematical notation its deductive power.
+
+bq. First of all mathematics is static. There is no equivalent, in mathematics, of the programming language notion of a procedure which gives a different answer each time you call it. The mathematical idea of a function is a fixed table of input-output pairs. [...] This is so even when mathematics is used to describe processes of change as in physics. [...] Physics as a science became possible only because Newton showed us how to reduce dynamics to statics in this way.
+
+bq. Secondly, and relatedly, there is in mathematics a certain kind of consistency in the use of names [...] Paradoxical though it may sound, in mathematics variables do not vary; they stand for a constant value throughout their scope.
+
+bq. These basic properties of mathematical notation have been termed by logicians, "referential transparency" [...] An immediate consequence of referential transparency is that equality is substitutive - equal expressions are always and everywhere interchangeable. It is this which gives mathematical notation its deductive power.
+
+bq. [...] in introducing the assignment statement, which can change the value of a variable in the middle of its scope, they have broken the basic ground-rules of mathematical notation. Instead of being referentially transparent, programming languages are referentially opaque. In fact, the things that we call "variables" [...] are not really variables [...] - in the last analysis they are names for registers in the store of a Von-Neumann computer.
+
+bq. It is because of this that it is so difficult to reason about programs. Since expressions can change their value through time, equality is not substitutive. Indeed, [...] it does not even have to be true that an expression is equal to itself (because the presence of side effects may mean that evaluating the same expression twice in succession can produce two different answers)! In general it is not possible to reason about such programs on the basis of a static analysis of the program text - instead we have to think of the program dynamically and follow the detailed flow of control [...].
+
+bq. A number of studies carried out in the industry have shown that a given programmer tends to produce, per year, a relatively fixed number of lines of code [...] and while the number of lines varies quite a lot from programmer to programmer, it is for a given individual largely independent of the language in which he is working (for example, it doesn't seem to matter whether it is assembly code or PL/1).
+
+bq. The significance of this result is that it means that the most important single variable in determining software production costs, apart from the quality of the programmers, is the level of language at which they are working. [...] programs written in FORTRAN are from five to ten times shorter than the equivalent assembly code. Other things being equal, then, the FORTRAN programmer is from five to ten times more productive than the assembly code programmer.
+
+bq. Our problem today is that in the 25 years that have elapsed since the invention of FORTRAN we have failed to produce any further substantial improvement in this basic ratio of expressive power. If you compare a program written in a "modern" imperative language, such as PASCAL or ADA with its FORTRAN equivalent, you will not find it very much shorter (in fact it might even be longer, because of the extra declaratory information necessitated by the current fad for very restrictive forms of strong typing).
+
+bq. [...] we can give a general reason why the change from an imperative language to a descriptive one should lead to programs becoming so much shorter. Expressed at an appropriate level of abstraction [...], an algorithm is a partially ordered set of computations - the partial ordering being imposed by the data dependencies.
+
+bq. In order to execute an algorithm on a Von-Neumann computer, however, we have to convert this to a total ordering (in any one of the many possible ways) and organise storage for the intermediate results. In an imperative language both of these tasks must be carried out explicitly by the programmer with the result that he has to specify a great deal of extra information.
+
+bq. [...] A subsidiary reason why conventional high level languages are so long-winded is that they lack certain necessary abstraction tools, in particular higher-order functions [...]
+
+bq. In summary, a good case can be made out for saying that the fundamental cause of the software crisis is the imperative and machine oriented nature of our programming languages, and that to overcome it we have to abandon the use of side effects and programmer control of sequencing in favour of purely functional notation.
+
+bq. The theoretical possibility of programming in a purely functional style has been known about for two decades - the obstacle to its use in practice has always been the difficulty of achieving acceptable efficiency in the use of existing hardware while using such techniques.
+
+
 h3. 1984 - John Hughes
 
 * "Why Functional Programming Matters":www.address.com
