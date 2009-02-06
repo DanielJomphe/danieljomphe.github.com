@@ -8,6 +8,7 @@ layout: default
 	{{ page.date | date_to_string }} » First Published<br />
 	{{ page.date-updated }}          » Last Updated
 </p>
+<p>Article Status: {{ page.stability }}</p>
 
 <div id="post"> {{ content }} </div>
 

@@ -2,10 +2,8 @@
 layout: post
 title:        The Case For Functional Programming
 date-updated: 03 Feb 2009
+stability:    Draft Release
 ---
-
-_Please consider the following as draft-quality stuff._<br />
-_I'm in the process of writing it and ramping up its average quality by a serious notch or two._
 
 h2(#contents). What Is Discussed Here?
 
