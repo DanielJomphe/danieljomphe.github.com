@@ -1,8 +1,8 @@
 ---
 layout: post
 title:        The Case For Functional Programming
-date-updated: 03 Feb 2009
-stability:    Draft Release
+date-updated: 05 Feb 2009
+stability:    Draft Release 0.2
 ---
 
 h2(#contents). What Is Discussed Here?
@@ -111,11 +111,11 @@ Wait, John says these assumptions of ours are all false. How could it be? Let's 
 
 h3(#imperative-language). Imperative Language
 
-Aside from the fact that conventional languages are said to be imperative, how could one define this concept?
+Aside from the fact that imperative languages are the tool to which we're used, how could one define this concept?
 
-One could think of an imperative language as one which expresses computations as _a sequence of manipulations which must imperatively be followed, affecting the state of memory so as to progressively build a result_.
+One could think of an imperative language as one which expresses computations as _a sequence of manipulations, which must imperatively be followed in the order in which they are expressed, affecting the state of named memory blocks that are shared, so as to progressively build a result out of them_.
 
-When a programmer uses the imperative style, he is mostly concerned with the interactions of the manipulations with the progressively-built result.
+When a programmer uses the imperative style, he is mostly concerned with the interactions of his code lines with the named variables that progressively help building the result.
 
 h4. Some Object-Oriented Java Dialect
 
@@ -345,7 +345,7 @@ I definitely suggest you schedule some time to read at least the first 12 pages 
 h4. References
 
 * "Alex Aiken's Memorial":http://theory.stanford.edu/~aiken/other/backus.pdf
-* "Can Programming Be Liberated from the von Neumann Style?":http://google-it-for-now.com
+* "Can Programming Be Liberated from the von Neumann Style?":http://www.stanford.edu/class/cs242/readings/backus.pdf
 
 h4. Further Reading
 
