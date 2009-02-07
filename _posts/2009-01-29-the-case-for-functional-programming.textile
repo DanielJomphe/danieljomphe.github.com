@@ -148,7 +148,7 @@ Now, here are a few global variables. They would normally be included as local v
 
 Here are a few interesting properties of this code:
 
-* Its looks seem to put an emphasis on the functional forms used.
+* It seems to put an emphasis on the functional forms used.
 * It uses only one programming technique: function application.
 * The order in which each expression is written doesn't matter.
 
@@ -189,7 +189,7 @@ smoothCake      = mixProgressively([Milk(Cup(1/2)), cream, base])
 
 Here are a few interesting properties of this code:
 
-* Its looks seem to put an emphasis on the equational nature of the program.
+* It seems to put an emphasis on the equational nature of the program.
 * It uses only one programming technique: function application.
 * The order in which each expression is written doesn't matter.
 
