@@ -73,7 +73,11 @@ Since the mechanism of function application, or in other words, *function call*,
 
 Before we ponder onto why and how we've got to think that functional programming is weird, let's dive into a few declarative languages to see how they look.
 
+Note that I have taken the liberty to personalize their syntaxes so that they read more easily to the eyes of a java-like language programmer.
+
 h4. Some Lisp Dialect
+
+Remark how this code says only what's needed:
 
 <table>
 	<tr>
@@ -121,19 +125,37 @@ h4. Some Lisp Dialect
 
 			(def base
 			  mix
-			    flour         (cup 2)
-			    baking-powder (teaspoon 2)
+			    flour         (cup        2)
+			    baking-powder (teaspoon   2)
 			    salt          (teaspoon 1/2))
 			{% endhighlight %}
 		</td>
 	</tr>
 </table>
 
+Here are a few interesting properties of this code:
+
+* Its looks seem to put an emphasis on the functional forms used.
+* It uses only one programming technique: function application.
+* The order in which each expression is written doesn't matter.
+
+h5. John Smith's Objective Opinion
+
+According to John Smith, this version of the program is _the_ *fastest* and *easiest* to read and write. He says it's also one of the *fastest* and *easiest* to maintain.
+
+(He already took a look at the other versions of this code example that follow. What a dude!)
+
+h6. Reactions
+
+Hey, _doesn't this mean that the Java version isn't the fastest and easiest one_?
+
+Doesn't this feel weird to you? John may say this, but what's the heck anyway with these weird functional, academic-level languages, right? Such languages aren't fit for critical production usage. They would crumble under hardship. They're not battle-tested. They're not widely used. They're too hard to learn. Right?
+
+Wait, John says these assumptions of ours are all false. How could it be? Let's skip to the next section, may we?
+
 h4. Some Haskell Dialect
 
-Remark how this code feels like mathematical equations.
-
-Note that I have taken the liberty to personalize Haskell's syntax so that it reads more easily to the eyes of a java-like language programmer:
+In this language, each function name is written on the left side of @=@, which means "... is described as ...". Obviously, the right side of @=@ describes what computations each function depends on to produce its result.
 
 {% highlight haskell %}
 blueberryBuckle = bake(Oven(375), readyCake([25..30]))
@@ -154,23 +176,23 @@ base            = mix([Flour(Cup(2)),   BakingPowder(Teaspoon(2)),
                        Salt(Teaspoon(1/2))])
 {% endhighlight %}
 
-This code uses only one programming technique, which is the already mentioned mechanism of function application.
+Here are a few interesting properties of this code:
 
-Each function name is written on the left side of @=@, which means "... is described as ...". Obviously, the right side of @=@ describes what computations this function depends on to produce its result.
+* Its looks seem to put an emphasis on the equational nature of the program.
+* It uses only one programming technique: function application.
+* The order in which each expression is written doesn't matter.
 
-According to John Smith, this version of the program is _the_ *fastest* and *easiest* to read, write, and maintain.
+h5. John Smith's Objective Opinion
 
-(He already took a look at the other versions that follow. What a dude!)
+According to John Smith, this version of the program is the _second_ *fastest* and *easiest* to read and write. He adds, though, that out of the box, Haskell goes great lengths to guarantee a lot of things that are impossible to guarantee in most other languages' proposed usage. Therefore, he says, Haskell is _the_ *fastest* and *easiest* to maintain. And for big programs, he says it's also _the_ *fastest* to write.
 
-Hey, _doesn't this mean that the Java version isn't the fastest and easiest one_?
+h6. Reactions
 
-Doesn't this feel weird to you? John may say this, but what's the heck anyway with these weird functional, academic-level languages, right? Such languages aren't fit for critical production usage. They would crumble under hardship. They're not battle-tested. They're not widely used. They're too hard to learn. Right?
-
-Wait, John says these assumptions of ours are all false. How could it be? Let's skip to the next section, may we?
+What, _again_? Where's Java?
 
 h3(#imperative-language). Imperative Language
 
-Aside from the fact that imperative languages are the tool to which we're used, how could one define this concept?
+Aside from the fact that *imperative* languages are the tool to which we're used, how could one define this concept?
 
 One could think of an imperative language as one which expresses computations as _a sequence of manipulations, which must imperatively be followed in the order in which they are expressed, affecting the state of named memory blocks that are shared, so as to progressively build a result out of them_.
 
@@ -230,11 +252,17 @@ public class Chef {
 
 Now, try to imagine how you would program the unimplemented methods, like chef.mixProgressively(...). Try a little more. Form yourself a mental picture. Continue, it's not clear enough. Ok, now it looks like something.
 
-According to John Smith, this version of the program is the _second_ *fastest* and *easiest* to read, write, and maintain.
+h5. John Smith's Objective Opinion
 
-John also mentions the unimplemented methods are much more involving to write than with our Haskell dialect. What?
+According to John Smith, this version of the program is the _third_ *fastest* and *easiest* to read, write, and maintain.
 
-Moreover, John mentions he uses quite a few faster- and easier-to-use languages than this one, that still fit in the category of object-oriented, imperative languages. Isn't this surprising, again? Let's not hear him more on Java.
+John also mentions the unimplemented methods are much more involving to write than with our Haskell dialect.
+
+Moreover, John mentions he uses quite a few faster- and easier-to-use languages than this one, that still fit in the category of object-oriented, imperative languages.
+
+h6. Reactions
+
+Isn't this surprising, again? Let's not hear him anymore on Java.
 
 h4. Some Procedural C Dialect
 
@@ -244,7 +272,11 @@ Wait, we know it would look almost the same as that of Java, just much more awkw
 
 I know you can easily imagine how you would program the unimplemented functions, like mixProgressively(...). We can easily see how awkward it would be to write them without them fitting in the greater scheme of the object-oriented paradigm.
 
+h5. John Smith's Objective Opinion
+
 According to John Smith, this version of the program is the _second_ *longest* and *hardest* to read, write, and maintain.
+
+h6. Reactions
 
 Rock on, John! We now understand each other. No need to spend more time with C. Let's see what's next.
 
@@ -256,7 +288,11 @@ Wait, did you really expect me to write this whole stuff in assembly language!? 
 
 Try to imagine how you would program everything, including the unimplemented procedures, like mixProgressively. Wouldn't it be longer to do than with Java's @for@ comprehensions or C's @for@ statement, and all those neat features we're used to?
 
+h5. John Smith's Objective Opinion
+
 Now, according to John Smith, this version of the program is _the_ *longest* and *hardest* to read, write, and maintain.
+
+h6. Reactions
 
 Ah! Rock on, John! We truly understand each other. _Wait_, that's right, we weren't used to think like you just some time ago...
 
@@ -297,7 +333,7 @@ Of course, no general-purpose programming language allows that level of expressi
 
 Now, this is where we raise an interesting question. Which kind of programming language would be the most effective at writing DSLs?
 
-John says the answer is to be found somewhere in the category of declarative languages. Functional languages are a category of declarative languages.
+John says the answer is to be found somewhere in the category of declarative languages. Functional languages are the most widely used class of declarative languages.
 
 h4. Who's The Chef?
 
