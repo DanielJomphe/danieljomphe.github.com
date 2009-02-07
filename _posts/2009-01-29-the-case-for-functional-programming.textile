@@ -97,48 +97,50 @@ Remark how this code says only what's needed:
 
 {% highlight clojure %}
 (defn blueberry-buckle []
-  bake
+  (bake
     oven       (375)
-    ready-cake ([25..30]))
+    ready-cake ([25..30])))
 
 (defn ready-cake []
-  sprinkle (topping pan-cake))
+  (sprinkle
+    topping
+    pan-cake)))
 
 (defn pan-cake []
-  pour
+  (pour
     blue-cake
-    pan ([8,8] crisco))
+    pan ([8,8] crisco)))
 
 (defn blue-cake []
-  stir
+  (stir
     blueberries (cup 2)
-    smoothCake)
+    smoothCake))
 
 (defn smooth-cake []
-  mix-progressively
+  (mix-progressively
     milk (cup 3/4)
     cream
-    base)
+    base))
 {% endhighlight %}
 {% highlight clojure %}
 (def topping
-  mix
+  (mix
     sugar    (cup      1/2)
     flour    (cup      1/3)
     cinnamon (teaspoon 1/2)
-    butter   (cup      1/4))
+    butter   (cup      1/4)))
 
 (def cream
-  mix
+  (mix
     sugar  (cup 3/4)
     crisco (cup 1/4)
-    egg    ())
+    egg    ()))
 
 (def base
-  mix
+  (mix
     flour         (cup        2)
     baking-powder (teaspoon   2)
-    salt          (teaspoon 1/2))
+    salt          (teaspoon 1/2)))
 {% endhighlight %}
 
 Here are a few interesting properties of this code:
