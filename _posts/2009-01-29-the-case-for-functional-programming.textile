@@ -15,6 +15,7 @@ h2(#contents). What Is Discussed Here?
 ** "Stop taking the Chef for a fool!":#chef-is-no-fool
 * "Prior Comparisons Of Language Levels":#prior-comparisons
 ** "1977 - John Backus":#backus
+** "1982 - David Turner":#turner
 
 h2(#comparing). Comparing Different Language Levels
 
@@ -291,7 +292,7 @@ h3(#backus). 1977 - John Backus
 
 We are now reaching one of the most interesting parts of this article.
 
-Here are a few reasons why you might already know of John Backus:
+Here are a few reasons why you might already know of *John Backus*:
 
 * He created the first compiler and high-level programming language: FORTRAN (1958).
 * He's also known for his work on other early languages, including ALGOL.
@@ -354,11 +355,9 @@ h4. Further Reading
 
 h3. 1982 - David Turner
 
-John Backus has often been caught saying of himself that he's lazy. It was one of his ways of explaining why he created high level languages.
+John Backus has often been caught saying of himself that he's lazy. It was one of his ways of explaining why he created high level languages. Nonetheless, the computer scientist the most remembered when it comes to laziness isn't Backus, but *David Turner*, who brought us the concept of *lazy evaluation*. We also owe him a great deal for the concept of *purity* in functional programming.
 
-Interestingly, though, the computer scientist the most remembered when it comes to laziness isn't Backus, but David Turner, who brought us the concept of lazy evaluation. We also owe him a great deal for the concept of purely functional programming.
-
-Both the purity and laziness concepts are central to what he wrote in 1981-1982 in his paper called _Recursion Equations As A Programming Language_.
+Both the purity and laziness concepts are central to what Turner wrote in 1981-1982 in his paper called *Recursion Equations As A Programming Language*.
 
 bq. The importance of applicative [functional] languages lies in the fact that they hold out the promise of being able to solve both of these problems at the same time [software costs and taking advantage of a very large degree of concurrency in the machine]. In both cases the key step is the abolition of the assignment statement, and with it the notion of sequencing.
 
