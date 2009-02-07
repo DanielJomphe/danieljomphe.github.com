@@ -1,8 +1,8 @@
 ---
 layout: post
 title:        The Case For Functional Programming
-date-updated: 05 Feb 2009
-stability:    Draft Release 0.2
+date-updated: 07 Feb 2009
+stability:    Draft Release 0.3
 ---
 
 h2(#contents). What Is Discussed Here?
