@@ -122,6 +122,9 @@ Remark how this code says only what's needed:
     cream
     base))
 {% endhighlight %}
+
+Now, here are a few global variables. They would normally be included as local variables of the functions that need them, but I wanted the code to be easier for you to read, hence these separate definitions:
+
 {% highlight clojure %}
 (def topping
   (mix
@@ -171,8 +174,7 @@ In this language, each function name is written on the left side of @=@, which m
 blueberryBuckle = bake(Oven(375), readyCake([25..30]))
 
 readyCake       = sprinkle(topping, panCake)
-
-topping         = mix([Sugar(Cup(1/2)),         Flour(Cup(1/3)),
+  where topping = mix([Sugar(Cup(1/2)),         Flour(Cup(1/3)),
                        Cinnamon(Teaspoon(1/2)), Butter(Cup(1/4))])
 
 panCake         = pour(blueCake, Pan([8,8], Crisco))
@@ -180,9 +182,8 @@ panCake         = pour(blueCake, Pan([8,8], Crisco))
 blueCake        = stir(BlueBerries(Cup(2)), smoothCake) 
 
 smoothCake      = mixProgressively([Milk(Cup(1/2)), cream, base])
-
-cream           = mix([Sugar(Cup(3/4)), Crisco(Cup(1/4)), Egg()])
-base            = mix([Flour(Cup(2)),   BakingPowder(Teaspoon(2)),
+  where cream   = mix([Sugar(Cup(3/4)), Crisco(Cup(1/4)), Egg()])
+        base    = mix([Flour(Cup(2)),   BakingPowder(Teaspoon(2)),
                        Salt(Teaspoon(1/2))])
 {% endhighlight %}
 
