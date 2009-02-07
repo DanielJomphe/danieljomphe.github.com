@@ -85,7 +85,7 @@ Since the mechanism of function application, or in other words, *function call*,
 
 Before we ponder onto why and how we've got to think that functional programming is weird, let's dive into a few declarative languages to see how they look.
 
-Note that I have taken the liberty to personalize their syntaxes so that they read more easily to the eyes of a java-like language programmer.
+Note that I have taken the liberty to personalize their syntaxes so that they read more easily to the eyes of a java-like language programmer. Therefore, please try not to reason too much about the meaning of how the parenthesises are used. The code examples are not there to help you learn these languages. They're rather there to help you see more quickly the fundamental semantics of each language. The biggest changes I've made was adding a bunch of parenthesises that should not be where they are, and removing some others whose placement would have felt awkward to any java-like language programmer.
 
 h4(#lisp-dialect). Some Functional Lisp Dialect
 
