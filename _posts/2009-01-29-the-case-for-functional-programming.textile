@@ -99,22 +99,22 @@ Remark how this code says only what's needed:
 (defn blueberry-buckle []
   (bake
     oven       (375)
-    ready-cake ([25..30])))
+    (ready-cake ([25..30]))))
 
 (defn ready-cake []
   (sprinkle
     topping
-    pan-cake)))
+    (pan-cake))))
 
 (defn pan-cake []
   (pour
     blue-cake
-    pan ([8,8] crisco)))
+    (pan ([8,8] crisco))))
 
 (defn blue-cake []
   (stir
     blueberries (cup 2)
-    smoothCake))
+    (smooth-cake)))
 
 (defn smooth-cake []
   (mix-progressively
