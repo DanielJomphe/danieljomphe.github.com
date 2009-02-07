@@ -98,7 +98,7 @@ Remark how this code says only what's needed:
 {% highlight clojure %}
 (defn blueberry-buckle []
   (bake
-    oven       (375)
+    (oven       (375))
     (ready-cake ([25..30]))))
 
 (defn ready-cake []
@@ -108,7 +108,7 @@ Remark how this code says only what's needed:
 
 (defn pan-cake []
   (pour
-    blue-cake
+    (blue-cake)
     (pan ([8,8] crisco))))
 
 (defn blue-cake []
