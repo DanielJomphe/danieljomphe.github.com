@@ -67,11 +67,7 @@ h4(#english-dialect). Some English Dialect
 
 For the sake of simplicity, I have inserted the ingredients and their measures right into their preparation directions:
 
-# Preheat oven to 375 degrees. Grease one 8x8 inch pan.
-# Cream together 3/4 cup sugar, 1/4 cup shortening, and one egg.
-# In a separate bowl mix together 2 cups flour, 2 teaspoons baking powder, and 1/2 teaspoon salt. Stir into sugar mixture, alternating with 1/2 cup milk. Stir in 2 cups fresh blueberries. Pour into greased 8x8 inch pan.
-# To make topping: Combine 1/2 cup sugar, 1/3 cup flour, 1/2 teaspoon ground cinnamon, and 1/4 cup butter. Sprinkle over cake batter.
-# Bake at 375 degree for 25-30 minutes.
+bq. <ol><li>Preheat oven to 375 degrees. Grease one 8x8 inch pan.</li><li>Cream together 3/4 cup sugar, 1/4 cup shortening, and one egg.</li><li>In a separate bowl mix together 2 cups flour, 2 teaspoons baking powder, and 1/2 teaspoon salt. Stir into sugar mixture, alternating with 1/2 cup milk. Stir in 2 cups fresh blueberries. Pour into greased 8x8 inch pan.</li><li>To make topping: Combine 1/2 cup sugar, 1/3 cup flour, 1/2 teaspoon ground cinnamon, and 1/4 cup butter. Sprinkle over cake batter.</li><li>Bake at 375 degree for 25-30 minutes.</li></ol>
 
 Now, let's see how this may be programmed. Please note that in the following versions of these directions, I have, out of pure laziness, left some functions undefined.
 
