@@ -61,15 +61,73 @@ Now, let's see how this may be programmed. Please note that in the following ver
 
 h3(#declarative-language). Declarative Language
 
-Understanding the concept of declarative programming is useful to see the simplicity of functional programming, since the latter is a special case of the former. Therefore, the following definition should help.
+Understanding the concept of *declarative* programming is useful to see the simplicity of *functional* programming, since the latter is a special case of the former. Therefore, the following definition should help.
 
-One could think of a declarative language as one which expresses computations as _a hierarchy of result descriptions_.
+One could think of a declarative language as one which expresses computations as _a hierarchy of *result descriptions*_.
 
-Following this line of thinking, functional programming expresses computations as _a hierarchy of function applications_, where each function is responsible of producing a result.
+Following this line of thinking, functional programming expresses computations as _a hierarchy of *function applications*_, where each function produces a result.
 
 When a programmer uses the functional style, he is mostly concerned with defining and combining functions and their applications.
 
-Since the mechanism of function application, or in other words, function _call_, is universally known, functional programming is far from being inaccessible. And that's precisely what might come as a surprise to one who has heard functional programming is a weird way of thinking of the process of writing software.
+Since the mechanism of function application, or in other words, *function call*, is universally known, functional programming is far from being inaccessible. And that's precisely what might come as a surprise to one who has heard that functional programming is a weird way of thinking of the process of writing software.
+
+Before we ponder onto why and how we've got to think that functional programming is weird, let's dive into a few declarative languages to see how they look.
+
+h4. Some Lisp Dialect
+
+<table>
+	<tr>
+		<td>
+			{% highlight clojure %}
+			(defn blueberry-buckle []
+			  bake
+			    oven       (375)
+			    ready-cake ([25..30]))
+
+			(defn ready-cake []
+			  sprinkle (topping pan-cake))
+
+			(defn pan-cake []
+			  pour
+			    blue-cake
+			    pan ([8,8] crisco))
+
+			(defn blue-cake []
+			  stir
+			    blueberries (cup 2)
+			    smoothCake)
+
+			(defn smooth-cake []
+			  mix-progressively
+			    milk (cup 3/4)
+			    cream
+			    base)
+			{% endhighlight %}
+		</td>
+		<td>
+			{% highlight clojure %}
+			(def topping
+			  mix
+			    sugar    (cup      1/2)
+			    flour    (cup      1/3)
+			    cinnamon (teaspoon 1/2)
+			    butter   (cup      1/4))
+
+			(def cream
+			  mix
+			    sugar  (cup 3/4)
+			    crisco (cup 1/4)
+			    egg    ())
+
+			(def base
+			  mix
+			    flour         (cup 2)
+			    baking-powder (teaspoon 2)
+			    salt          (teaspoon 1/2))
+			{% endhighlight %}
+		</td>
+	</tr>
+</table>
 
 h4. Some Haskell Dialect
 
