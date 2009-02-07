@@ -49,7 +49,7 @@ Now, thinking of this, I know _someone_ who's not your average Joe at all. Yes, 
 
 h4(#john-smith). Qualifications Of John Smith
 
-Why John Smith? Because, you see, John Smith is the only guy in the world who's a complete expert of all the programming language dialects I'm going to use in this article. All of them, no trick!
+Why *John Smith*? Because, you see, John Smith is the only guy in the world who's a complete expert of all the programming language dialects I'm going to use in this article. All of them, no trick!
 
 More importantly and more impressively, _John Smith learned those languages perfectly concurrently_, and _used them equally ever since_. And yet, as if this was not enough qualifications for him, John has been spending 1 hour per working day since the start of his career in 1996, speaking about these different languages with his dozens of siblings who go by the same name as his', but work in very different contexts. And guess what? _They all share this very same background._ They all think along the same lines as John's. Can you believe it? Incredible, isn't it?
 
@@ -95,59 +95,51 @@ h4(#lisp-dialect). Some Functional Lisp Dialect
 
 Remark how this code says only what's needed:
 
-<table>
-	<tr>
-		<td>
-			{% highlight clojure %}
-			(defn blueberry-buckle []
-			  bake
-			    oven       (375)
-			    ready-cake ([25..30]))
+{% highlight clojure %}
+(defn blueberry-buckle []
+  bake
+    oven       (375)
+    ready-cake ([25..30]))
 
-			(defn ready-cake []
-			  sprinkle (topping pan-cake))
+(defn ready-cake []
+  sprinkle (topping pan-cake))
 
-			(defn pan-cake []
-			  pour
-			    blue-cake
-			    pan ([8,8] crisco))
+(defn pan-cake []
+  pour
+    blue-cake
+    pan ([8,8] crisco))
 
-			(defn blue-cake []
-			  stir
-			    blueberries (cup 2)
-			    smoothCake)
+(defn blue-cake []
+  stir
+    blueberries (cup 2)
+    smoothCake)
 
-			(defn smooth-cake []
-			  mix-progressively
-			    milk (cup 3/4)
-			    cream
-			    base)
-			{% endhighlight %}
-		</td>
-		<td>
-			{% highlight clojure %}
-			(def topping
-			  mix
-			    sugar    (cup      1/2)
-			    flour    (cup      1/3)
-			    cinnamon (teaspoon 1/2)
-			    butter   (cup      1/4))
+(defn smooth-cake []
+  mix-progressively
+    milk (cup 3/4)
+    cream
+    base)
+{% endhighlight %}
+{% highlight clojure %}
+(def topping
+  mix
+    sugar    (cup      1/2)
+    flour    (cup      1/3)
+    cinnamon (teaspoon 1/2)
+    butter   (cup      1/4))
 
-			(def cream
-			  mix
-			    sugar  (cup 3/4)
-			    crisco (cup 1/4)
-			    egg    ())
+(def cream
+  mix
+    sugar  (cup 3/4)
+    crisco (cup 1/4)
+    egg    ())
 
-			(def base
-			  mix
-			    flour         (cup        2)
-			    baking-powder (teaspoon   2)
-			    salt          (teaspoon 1/2))
-			{% endhighlight %}
-		</td>
-	</tr>
-</table>
+(def base
+  mix
+    flour         (cup        2)
+    baking-powder (teaspoon   2)
+    salt          (teaspoon 1/2))
+{% endhighlight %}
 
 Here are a few interesting properties of this code:
 
