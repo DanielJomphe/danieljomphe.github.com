@@ -9,13 +9,29 @@ h2(#contents). What Is Discussed Here?
 
 * "Comparing Different Language Levels":#comparing
 ** "How To Reach Truthful Conclusions":#how-to-conclude
+*** "Qualifications Of Yours Truly":#daniel-jomphe
+*** "Qualifications Of John Smith":#john-smith
 ** "Natural Language - The Testbed":#natural-language
+*** "Some English Dialect":#english-dialect
 ** "Declarative Language":#declarative-language
+*** "Some Functional Lisp Dialect":#lisp-dialect
+*** "Some Functional Haskell Dialect":#haskell-dialect
 ** "Imperative Language":#imperative-language
+*** "Some Object-Oriented Java Dialect":#java-dialect
+*** "Some Procedural C Dialect":#c-dialect
+*** "Some Procedural Assembly Language Dialect":#assembly-dialect
 ** "Stop taking the Chef for a fool!":#chef-is-no-fool
-* "Prior Comparisons Of Language Levels":#prior-comparisons
+*** "Conclusion":#our-comparison-conclusion
+*** "Some Chef Dialect":#chef-dialect
+*** "Who's The Chef?":#whos-the-chef
+* "Stronger Comparisons Of Language Levels":#stronger-comparisons
 ** "1977 - John Backus":#backus
+*** "Frustrations And Solutions":#backus-frustrations
+*** "On Imperative Programming Languages":#backus-comparison
+*** "References":#backus-references
 ** "1982 - David Turner":#turner
+*** "On Imperative Programming Languages":#turner-comparison
+*** "References":#turner-references
 
 h2(#comparing). Comparing Different Language Levels
 
@@ -25,13 +41,13 @@ h3(#how-to-conclude). How To Reach Truthful Conclusions
 
 To this avail, we need to pick someone very special.
 
-h4. Qualifications Of Yours Truly
+h4(#daniel-jomphe). Qualifications Of Yours Truly
 
 Well, ehr, we can't use me. Why? Because I'm a Java and C++ programmer. Because I'm no expert. Because I'm not used to any other kind of programming than what is called Imperative Programming. You know, although I certainly ain't nobody, I'm still not too far from being your regular Joe.
 
 Now, thinking of this, I know _someone_ who's not your average Joe at all. Yes, that's right: we'll pick him! This guy's uniquely qualified to derive objective conclusions. Ladies and Gentlemen, allow me to present you _the_ John Smith.
 
-h4. Qualifications Of John Smith
+h4(#john-smith). Qualifications Of John Smith
 
 Why John Smith? Because, you see, John Smith is the only guy in the world who's a complete expert of all the programming language dialects I'm going to use in this article. All of them, no trick!
 
@@ -47,7 +63,7 @@ Now that we have introduced John Smith, let's talk about the program we will use
 
 John said any program could do, so for illustration purposes, this program will be a recipe I chose by asking Google's first result for @recipe@, and clicking on two links. The first one led me to a deserts page, and the second one to the yummy-looking "Blueberry Buckle":http://allrecipes.com/Recipe/Blueberry-Buckle/Detail.aspx. This recipe's directions are what we will program.
 
-h4. Some English Dialect
+h4(#english-dialect). Some English Dialect
 
 For the sake of simplicity, I have inserted the ingredients and their measures right into their preparation directions:
 
@@ -75,7 +91,7 @@ Before we ponder onto why and how we've got to think that functional programming
 
 Note that I have taken the liberty to personalize their syntaxes so that they read more easily to the eyes of a java-like language programmer.
 
-h4. Some Lisp Dialect
+h4(#lisp-dialect). Some Functional Lisp Dialect
 
 Remark how this code says only what's needed:
 
@@ -153,7 +169,7 @@ Doesn't this feel weird to you? John may say this, but what's the heck anyway wi
 
 Wait, John says these assumptions of ours are all false. How could it be? Let's skip to the next section, may we?
 
-h4. Some Haskell Dialect
+h4(#haskell-dialect). Some Functional Haskell Dialect
 
 In this language, each function name is written on the left side of @=@, which means "... is described as ...". Obviously, the right side of @=@ describes what computations each function depends on to produce its result.
 
@@ -198,7 +214,7 @@ One could think of an imperative language as one which expresses computations as
 
 When a programmer uses the imperative style, he is mostly concerned with the interactions of his code lines with the named variables that progressively help building the result.
 
-h4. Some Object-Oriented Java Dialect
+h4(#java-dialect). Some Object-Oriented Java Dialect
 
 Ah, _home, sweet home_. How reassuring is the smell of _home, sweet home_, isn't it?
 
@@ -264,7 +280,7 @@ h6. Reactions
 
 Isn't this surprising, again? Let's not hear him anymore on Java.
 
-h4. Some Procedural C Dialect
+h4(#c-dialect). Some Procedural C Dialect
 
 So, where's the program?
 
@@ -280,7 +296,7 @@ h6. Reactions
 
 Rock on, John! We now understand each other. No need to spend more time with C. Let's see what's next.
 
-h4. Some Procedural Assembly Language Dialect
+h4(#assembly-dialect). Some Procedural Assembly Language Dialect
 
 So, where's the program?
 
@@ -305,7 +321,7 @@ If we consider that:
 
 then we can safely derive some conclusions.
 
-h4. Conclusion
+h4(#our-comparison-conclusion). Conclusion
 
 | Each time we step *closer* to the *machine-level* details... |
 |>. ...we need to invest *more mental effort* and *more time* to write something. |
@@ -321,7 +337,7 @@ In other words, who, after having known the enlightenment coming from stepping a
 
 Well, let's get back to constructive stuff.
 
-h4. Some Chef Dialect
+h4(#chef-dialect). Some Chef Dialect
 
 Isn't it worth to pursue such clarity and succinctness?
 
@@ -335,7 +351,7 @@ Now, this is where we raise an interesting question. Which kind of programming l
 
 John says the answer is to be found somewhere in the category of declarative languages. Functional languages are the most widely used class of declarative languages.
 
-h4. Who's The Chef?
+h4(#whos-the-chef). Who's The Chef?
 
 Or, in another words, who's the one taken for a fool?
 
@@ -376,7 +392,7 @@ Therefore, if we could find a Chef that allows us to express our desires five ti
 
 Wow! I want to work with a better Chef. Don't you?
 
-h2(#prior-comparisons). Prior Comparisons Of Language Levels
+h2(#stronger-comparisons). Stronger Comparisons Of Language Levels
 
 Now, let's put aside our own conclusions to hear other kinds of wisdom.
 
@@ -395,7 +411,7 @@ Here are a few reasons why you might already know of *John Backus*:
 
 Now, why do you think I'm mentioning the creator of the first high-level programming language?
 
-h4. Frustrations And Solutions
+h4(#backus-frustrations). Frustrations And Solutions
 
 Let's hear Alex Aiken, from Stanford University:
 
@@ -417,7 +433,7 @@ History now tells us that it's in the 10 years following Backus' lecture that re
 
 So, although John Backus is most remembered for his first works on FORTRAN, BNF and ALGOL, we should not forget why he devoted the last 15 years of his career to the field of functional programming.
 
-h4. On Imperative Programming Languages
+h4(#backus-comparison). On Imperative Programming Languages
 
 Now, let's see exactly how Backus described, in his famous lecture, imperative programming languages:
 
@@ -437,21 +453,25 @@ Reading Backus' paper has been a profoundly enlightening experience for me.
 
 I definitely suggest you schedule some time to read at least the first 12 pages of his lecture. The first 7 pages will shed out more light on what's wrong with imperative languages; then, the next pages will explain how a language can be implemented on top of a very small number of sound and simple concepts that can be used and powerfully combined in all sorts of natural ways to describe computations.
 
-h4. References
+h4(#backus-references). References
+
+h5. Bibliography
 
 * "Alex Aiken's Memorial":http://theory.stanford.edu/~aiken/other/backus.pdf
 * "Can Programming Be Liberated from the von Neumann Style?":http://www.stanford.edu/class/cs242/readings/backus.pdf
 
-h4. Further Reading
+h5. Further Reading
 
 * "Wikipedia: John Backus":http://en.wikipedia.org/wiki/John_Backus
 * "IBM: Builders Exhibit":http://www-03.ibm.com/ibm/history/exhibits/builders/builders_backus.html
 
-h3. 1982 - David Turner
+h3(#turner). 1982 - David Turner
 
 John Backus has often been caught saying of himself that he's lazy. It was one of his ways of explaining why he created high level languages. Nonetheless, the computer scientist the most remembered when it comes to laziness isn't Backus, but *David Turner*, who brought us the concept of *lazy evaluation*. We also owe him a great deal for the concept of *purity* in functional programming.
 
 Both the purity and laziness concepts are central to what Turner wrote in 1981-1982 in his paper called *Recursion Equations As A Programming Language*.
+
+h4(#turner-comparison). On Imperative Programming Languages 
 
 bq. The importance of applicative [functional] languages lies in the fact that they hold out the promise of being able to solve both of these problems at the same time [software costs and taking advantage of a very large degree of concurrency in the machine]. In both cases the key step is the abolition of the assignment statement, and with it the notion of sequencing.
 
@@ -483,6 +503,7 @@ bq. In summary, a good case can be made out for saying that the fundamental caus
 
 bq. The theoretical possibility of programming in a purely functional style has been known about for two decades - the obstacle to its use in practice has always been the difficulty of achieving acceptable efficiency in the use of existing hardware while using such techniques.
 
+h4(#turner-references). References
 
 h3. 1984 - John Hughes
 
