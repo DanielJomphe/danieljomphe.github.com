@@ -2,7 +2,7 @@
 layout: post
 title:        The Case For Functional Programming
 date-updated: 07 Feb 2009
-stability:    Draft Release 0.4
+stability:    Draft Release 0.4.1
 ---
 
 h2(#contents). What Is Discussed Here?
@@ -92,27 +92,27 @@ h4(#lisp-dialect). Some Functional Lisp Dialect
 Remark how this code says only what's needed:
 
 {% highlight clojure %}
-(defn blueberry-buckle []
+(defn blueberry-buckle
   (bake
     (oven       (375))
     (ready-cake ([25..30]))))
 
-(defn ready-cake []
+(defn ready-cake
   (sprinkle
     topping
     (pan-cake))))
 
-(defn pan-cake []
+(defn pan-cake
   (pour
     (blue-cake)
     (pan ([8,8] crisco))))
 
-(defn blue-cake []
+(defn blue-cake
   (stir
     blueberries (cup 2)
     (smooth-cake)))
 
-(defn smooth-cake []
+(defn smooth-cake
   (mix-progressively
     milk (cup 3/4)
     cream
@@ -145,6 +145,8 @@ Now, here are a few global variables. They would normally be included as local v
 Here are a few interesting properties of this code:
 
 * It seems to put an emphasis on the functional forms used.
+* It's laid out in a kind of vertical, narrow column.
+* Types are *strongly* and *dynamically inferred*.
 * It uses only one programming technique: function application.
 * The order in which each expression is written doesn't matter.
 
@@ -183,9 +185,25 @@ smoothCake      = mixProgressively([Milk(Cup(1/2)), cream, base])
                        Salt(Teaspoon(1/2))])
 {% endhighlight %}
 
+Now, let's implement three of the unimplemented functions, just to see how algorithms are expressed in Haskell:
+
+{% highlight haskell %}
+mix(ings)              = stir(ings, Mixture())
+
+mixProgressively(ings)                 = mixParts(map(/10, ings), Mixture(), ings)
+  where mixParts(    _, mixed, [[]:_]) = mixed
+        mixParts(parts, mixed, rests)  = mixParts(parts,
+                                                  stir(parts, mixed),
+                                                  map(-(parts), rests))
+
+stir(ings, mixture)    = foldr(incorporate, mixture, ings)
+{% endhighlight %}
+
 Here are a few interesting properties of this code:
 
 * It seems to put an emphasis on the equational nature of the program.
+* It's laid out much more horizontally than vertically.
+* Types are *strongly* and *statically inferred*.
 * It uses only one programming technique: function application.
 * The order in which each expression is written doesn't matter.
 

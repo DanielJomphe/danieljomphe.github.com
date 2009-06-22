@@ -1,0 +1,74 @@
+---
+layout: post
+title:        Understanding Dispatch
+date-updated: 
+stability:    Draft Release 0.1.0
+---
+
+h2. Introduction
+
+I believe multiple dispatch is known to be hard to understand. When I first read about it, for some reason, it took me quite a lot of thinking before I really understood it all. Now that I understand it very well, I find it odd that it felt so challenging at the time. For this reason, I wanted to try putting an end to this nonsense. There's probably other articles out there that explain it very well today. In any case, here's my take. As usual with me, it's pretty wordy: I like to surround that kind of knowledge with lots of useful observations.
+
+Before diving into the matter of the subject, I'd like to mention the areas where I've chosen conciseness or simplicity over exhaustivity or depth:
+
+# I have decided to always prefer the former over the latter, even when the latter would have made more sense to the knowledgeable reader:
+** *_Compiler_* over _interpreter_.
+** *_Class_* over _type_.
+** *_Instance_* over its equivalents.
+** *_Function_* over _function_ and their equivalents.
+# I have also decided to omit mentioning in-place:
+** Error handling.
+** Rules ignored or handled differently by some languages.
+** Extreme flexibility needs may warrant usage of reflection to replace static dispatch.
+
+In any case, these omissions should be easy to spot.
+
+h2. Definitions
+
+# *Function Dispatch* happens when some code calls a function, and implies two phases - *search* and *decide*:
+** First, a *search* is made for functions of the same name:
+*** that are accessible to the caller,
+*** whose parameters match the call arguments, and
+*** whose return type match the context of the call.
+*** This search is almost always done at _compile time_. Thus, it's part of *static dispatch*.
+** Based on the results of the search, a *decision* is made:
+*** If one and only one candidate is found, there's no need to make any decision other than returning it to the compiler for its execution.
+*** If there's more than one candidate, then we're in presence of polymorphism:
+**** If the decision can be made during _compile time_, then _dispatch_ makes it and returns the winner to the compiler.
+**** Otherwise, if the compiler anticipates that the decision could be made during _run time_, then it makes provision for the eventual _dynamic dispatch_ of the call.
+*** *Dynamic Dispatch* is all about making a decision related to _run time_ polymorphism. It has access to the results of the search made during the static dispatch. Thus, it decides which candidate should be executed depending on the run time class information available:
+**** *Single Dispatch* pertains to the category of Object Oriented Programming where _Classes_ *own* their functions. Typical OOP. Thus, the polymorphism in single dispatch is all about making sure the proper function of *the* instance's class hierarchy is executed.
+**** *Multiple Dispatch* pertains to what could be called a wider definition of Object Oriented Programming. Or, arguably, it's the polymorphism of Functional Programming. To define multiple dispatch, let's use contrasts:
+***** _Single_ dispatch is *only* concerned with the run time *class* of *the* instance to which a function *belongs*.
+***** _Multiple_ dispatch is concerned with the run time *information* of *all* the instance(s) to which a function *is associated*.
+***** That's it, and that's why they're called _single_ and _multiple_ dispatch.
+
+h2. Observations
+
+# *Single Dispatch*
+** Classes define which functions they provide. They _own_ them. Typically, the definition of each one of their functions is written _inside_ their own definition.
+** *Thus in this model, classes rule.*
+** Closed. _If you own the class, you own its future._
+*** The owner will need to evaluate and decide if it's wise-and how-to open the class properly for future evolution.
+** *Polymorphism is limited to happen only on the class of the instance of the function called, and nowhere else!*
+*** Thus, it's the kind of run time polymorphism most programmers are used to.
+** The associations expressed with this model are necessarily of cardinality 1 to N.
+** Mixins still fit in this category.
+** _That's typical OOP!_
+# *Multiple Dispatch*
+** Functions simply define which parameters they support as usual.
+*** Each parameter may be expressed in a way to imply a run time polymorphism check.
+** *Thus in this model, functions rule.*
+** Closed. _If you own the function, you own its future._
+*** The owner will need to evaluate and decide if it's wise-and how-to open the function properly for future evolution.
+** *Polymorphism happens _everywhere_ and _anyhow_ you want it!*
+*** *everywhere*: each parameter may use run time checks
+*** *anyhow*: polymorphism is not limited in terms of examining the identity of an instance's class. It may instead decide to inspect values, internal structure or metadata. 
+** This model may be used to express any kind of association: 1 to N and M to N.
+** _That's very powerful functional programming!_
+
+Of course, some languages mix together the models behind single dispatch and multiple dispatch. This yields languages that feel more familiar to typical Object Oriented programmers, while keeping all the advantages of multiple dispatch.
+
+h2. Examples
+
+Are they still needed to grok it? Well, I suppose they could help. ...But they're scheduled for later! If someone mentions me that the great set of examples I have in mind might be very useful, it might accelerate a lot my settling on writing them.

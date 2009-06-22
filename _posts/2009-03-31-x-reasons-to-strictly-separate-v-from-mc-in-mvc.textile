@@ -1,0 +1,88 @@
+---
+layout: post
+title:        10 Reasons To Strictly Separate The V In MVC
+date-updated: 31 Mar 2009
+stability:    Draft Release 0.1.0
+---
+
+A few months ago, I spent some time researching better MVC(Model-View-Controller) practices. After discussing about it with my colleagues, I researched the following reasons why a business would want to *strictly* separate the V in MVC from MC.
+
+Note that the following points are of course only true of a MVC app which started from day 0 with a V template engine that strictly enforces separation of V from MC.
+
+# *V template engine easier and faster to learn*
+** No need to learn a (nearly-/fully-)turing-compliant language
+** No need to learn best practices to avoid entangling with MC
+# *V faster to write*
+*** Impossible to write business logic in V
+*** Programming constructs easier to use
+*** Final appearance/structure easier to understand/visualize
+*** No need to review to make sure V avoids entangling with MC
+# *V faster to maintain*
+** Impossible for V to introduce bugs in business logic
+# *V more generic/general/reusable*
+** Each part of a template is more applicable to other apps
+*** A template can be composed of multiple templates
+*** Each purpose-specific template will look pretty much the same in different apps.
+# *V is more easily secured*
+** No control structures used
+** No business logic in V
+# *V easier to swap for a sexier V*
+** No business logic in V
+# *V introduces 0 bugs in an app's business behavior*
+** Only possible bugs are presentation-related
+# *V can be written/maintained by designers (or others)*
+** See previous points.
+# *V and MC can be written concurrently more easily and naturally*
+** See previous points.
+# *Debugging is faster than with traditional MVC apps*
+** All business-related behavior bugs are in MC
+*** No need to look at V for business logic
+** Proper MC design more emphasized
+*** MC completely reflects the business logic
+
+Consequently, I think it's safe to say that with strictly-enforced separation of V from MC:
+
+* Developing a MVC application is faster
+* Maintaining a MVC application is faster
+* Evolving a MVC application is faster
+
+Or, *on a business point of view*:
+
+* Developing, maintaining and evolving applications costs less.
+
+h2. A Practical Solution
+
+Although it's not yet as popular as some non-strict alternatives like Velocity and FreeMarker, "StringTemplate":http://www.stringtemplate.org/ is the most serious and solid strict V // MC template engine I know of. If you can integrate it in your projects, you won't be disappointed:
+
+* *Benefits of the strict separation are backed by formal evidence*
+** "White Paper":http://www.cs.usfca.edu/~parrt/papers/mvc.templates.pdf [pdf]
+** "My annotated version of the same White Paper":/assets/mvc.templates-annotated.pdf [pdf]
+* *Mature*
+** Many years of development, evolution and usage
+*** started in 1999
+*** public since 2003
+* *Used in critical software*
+** ANTLR, one of the most widely recognized parser generators!
+* *Used by important industry players*
+** Adobe (Flex 3)
+** Jboss (Rules - Drools)
+** Home Depot (a web site with > 500 000 hits per week)
+** Oracle
+** "Squarespace":http://www.squarespace.com, a publishing platform. Their templates are editable by thousands of bloggers/businesses.
+*** "StringTemplate was PERFECT for this. We needed a system that would: (1) Be *extremely fast/simple* and (2) ENSURE that *users can do nothing to harm our system*."
+*** "[On the other hand,] Velocity would have been nearly impossible to enforce security with. There were numerous attacks related to invoking classLoaders by referencing getClass on random objects, not to mention that the very paradigm of the templates caused us to write code that did not strictly enforce view vs. controller, further resulting in code we had written that could have been insecure in many cases. It wasn't just impossible to stop users, but also ourselves in many cases."
+*** This testimony is confirmed through its mention in the formal paper.
+* *Capable of generating any kind of text (xml, html, css, java, etc.)*
+* *Powerful enough to express your needs in a V*
+** This addresses the common fear that a template engine might not be powerful enough for some needs.
+** Evidence comes from ANTLR being able to generate parsers using it.
+* *Code released under the generous BSD-3 license.*
+* *Implemented in Java*
+** Integrates with Spring MVC.
+** Builds with Maven.
+* *Ported to other languages*
+** Official ports: C# and Python
+** Unofficial ports for your favorite language may exist.
+* *Also available as a command-line tool.*
+
+http://www.artima.com/lejava/articles/stringtemplate.html
