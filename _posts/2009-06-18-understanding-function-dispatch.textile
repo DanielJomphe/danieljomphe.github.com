@@ -15,7 +15,7 @@ Before diving into the matter of the subject, I'd like to mention the areas wher
 ** *_Compiler_* over _interpreter_.
 ** *_Class_* over _type_.
 ** *_Instance_* over its equivalents.
-** *_Function_* over _function_ and their equivalents.
+** *_Function_* over _method_ and their equivalents.
 # I have also decided to omit mentioning in-place:
 ** Error handling.
 ** Rules ignored or handled differently by some languages.
