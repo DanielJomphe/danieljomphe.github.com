@@ -2,7 +2,7 @@
 layout: post
 title:        The Case For Functional Programming
 date-updated: 03 Oct 2009
-stability:    Draft Release 0.4.2
+stability:    Draft Release 0.4.3
 ---
 
 h2(#contents). What Is Discussed Here?
@@ -150,7 +150,7 @@ Here are a few interesting properties of this code:
 
 * It seems to put an emphasis on the functional forms used.
 * It's laid out in a kind of vertical, narrow column.
-* Types are *strongly* and *dynamically inferred*.
+* Types are *strongly* and *dynamically checked*.
 * It uses only one programming technique: function application.
 * The order in which each expression is written doesn't matter.
 
@@ -329,7 +329,7 @@ h3(#chef-is-no-fool). Stop taking the Chef for a fool!
 
 If we consider that:
 
-* each one of the program versions we looked at was successively closer to machine-level details, and
+* starting when we stopped looking at declarative language examples, each one of the program versions we looked at was successively closer to machine-level details, and
 * John's opinions were really true,
 
 then we can safely derive some conclusions.
@@ -391,7 +391,7 @@ ourCode      = program - compilerCode
 compilerCode = program - ourCode
 </pre>
 
-Now, if this doesn't make sense at all to you, there's a good reason for it. _Any_ successful high-schooler could beat my long-forgotten (poor) maths skills. Therefore, please correct me if I'm wrong in any way.
+Now, if this doesn't make perfect sense to you, there's a good reason for it. _Any_ successful high-schooler could beat my long-forgotten (poor) maths skills. Therefore, please correct me if I'm wrong in any way.
 
 h5. Then Who's The Compiler?
 
@@ -409,7 +409,7 @@ h2(#stronger-comparisons). Stronger Comparisons Of Language Levels
 
 Now, let's put aside our own conclusions to hear other kinds of wisdom.
 
-After all, who knows if John Smith really is that credible?
+After all, who knows if I can prove Johm Smith's existence?
 
 h3(#backus). 1977 - John Backus
 
@@ -523,7 +523,9 @@ Since then, some things changed:
 # Second, some arduous things, like memory management, have been removed from our hands, thanks to garbage collection. This change is recognized as being the one that contributed the most to improving our productivity in the last 20 years.
 # Third, our languages started to adopt more functional techniques, like those of higher-order programming.
 
-Taken together, these changes enabled us to create programs in some of our modern languages which are probably five to ten times shorter than they would have been in the C++ of 10 years ago. All of this being said, let's mention that our imperative languages have continued to use this very restrictive form of strong typing that David wrote about. It's only recently that some of our languages started to infer some types, and in a very limited way. In any case, what needs to be emphasized is that even though our languages have evolved, they are still fundamentally oriented towards an imperative usage.
+Taken together, these changes enabled us to create programs in some of our modern languages which are probably five to ten times shorter than they would have been in the C++ of 10 years ago. All of this being said, let's mention that our imperative languages have continued to use this very restrictive form of strong typing that David wrote about. It's only recently that some of our languages started to improve on this basic type checking by inferring some types; but even this is a far cry from the kind of type checking that exists in the functional breed of languages. 
+
+All of this being said, what needs to be emphasized is that even though our languages have evolved, they are still fundamentally oriented towards an imperative usage.
 
 bq. [...] We can give a general reason why the change from an imperative language to a descriptive one should lead to programs becoming so much shorter. Expressed at an appropriate level of abstraction [...], an algorithm is a partially ordered set of computations - the partial ordering being imposed by the data dependencies.
 
@@ -531,11 +533,11 @@ bq. In order to execute an algorithm on a Von-Neumann computer, however, we have
 
 bq. In summary, a good case can be made out for saying that the fundamental cause of the software crisis is the imperative and machine oriented nature of our programming languages, and that to overcome it we have to abandon the use of side effects and programmer control of sequencing in favour of purely functional notation.
 
-Radical, but true. There's been a time when programmers felt garbage collection was an unacceptable way of managing memory. Nowadays, we wouldn't want to part with such a facility unless it was of the utmost importance to do so. The same can be said of what I will call _manual order management_. It's time for us let it loose in most of our code. Smart compilers can give us another big increase in productivity, if we will let them decide how to order our computations, within the limits of our very clear functional semantics.
+Radical, but true. There's been a time when programmers felt garbage collection was an unacceptable way of managing memory. Nowadays, we wouldn't want to part with such a facility unless it was of the utmost importance to do so. The same can be said of what I will call _manual computation order management_. It's time for us let it loose in most of our code. Smart compilers can give us another big increase in productivity, if we will let them decide how to order our computations, within the limits of our very clear functional semantics.
 
 bq. The theoretical possibility of programming in a purely functional style has been known about for two decades - the obstacle to its use in practice has always been the difficulty of achieving acceptable efficiency in the use of existing hardware while using such techniques.
 
-A few years after he wrote his paper, the technology needed for creating efficient compilers for functional languages started to become competitive. Since then, the gap has been closed. That is, of course, if you compare those functional and imperative languages whose compiler is designed for performance.
+A few years after he wrote his paper, the technology used to create optimizing compilers for functional languages started to become competitive. Since then, the gap has been closed. That is, of course, if you compare those functional and imperative languages whose compiler is designed for performance.
 
 h4(#turner-references). References
 
@@ -551,7 +553,11 @@ h4(#hughes-references). References
 
 h2. More to come in the future...
 
+More papers, more data
+
 Formality
+
+Provability
 
 Value Transparency, not Opaqueness
 
@@ -559,7 +565,7 @@ h3. Fundamental Problems Of The Imperative Way
 
 h4. The Assignment Statement
 
-h4. Manual Order Management
+h4. Manual Computation Order Management
 
 h3. The Imperative Coalition's Last Hopes
 
