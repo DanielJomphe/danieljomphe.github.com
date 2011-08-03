@@ -29,7 +29,7 @@ h2. Definitions
 ** First, a *search* is made for functions of the same name:
 *** that are accessible to the caller,
 *** whose parameters match the call arguments, and
-*** whose return type match the context of the call.
+*** whose return type matches the context of the call.
 *** This search is almost always done at _compile time_. Thus, it's part of *static dispatch*.
 ** Based on the results of the search, a *decision* is made:
 *** If one and only one candidate is found, there's no need to make any decision other than returning it to the compiler for its execution.
