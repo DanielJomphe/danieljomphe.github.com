@@ -23,7 +23,7 @@ Note that the following points are of course only true of a MVC app which starte
 ** Each part of a template is more applicable to other apps
 *** A template can be composed of multiple templates
 *** Each purpose-specific template will look pretty much the same in different apps.
-# *V is more easily secured*
+# *V more easily secured*
 ** No control structures used
 ** No business logic in V
 # *V easier to swap for a sexier V*
@@ -34,7 +34,7 @@ Note that the following points are of course only true of a MVC app which starte
 ** See previous points.
 # *V and MC can be written concurrently more easily and naturally*
 ** See previous points.
-# *Debugging is faster than with traditional MVC apps*
+# *Debugging faster than with traditional MVC apps*
 ** All business-related behavior bugs are in MC
 *** No need to look at V for business logic
 ** Proper MC design more emphasized
